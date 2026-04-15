@@ -13,6 +13,10 @@ const books = [
   { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: coverNarrowPath },
   { title: 'MY NAME IS SAUL', rating: '4.7', cover: coverSaul },
   { title: 'PRICE FOR GENIUS', rating: '4.2', cover: coverPriceGenius },
+  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: coverPlausible },
+  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: coverNarrowPath },
+  { title: 'MY NAME IS SAUL', rating: '4.7', cover: coverSaul },
+  { title: 'PRICE FOR GENIUS', rating: '4.2', cover: coverPriceGenius },
 ];
 
 function RatingBadge({ rating }) {
@@ -25,10 +29,17 @@ function RatingBadge({ rating }) {
 }
 
 export default function MoreBooksGrid() {
-  const [page, setPage] = useState(0);
-  const perPage = 4;
-  const totalPages = Math.ceil(books.length / perPage);
-  const visible = books.slice(page * perPage, (page + 1) * perPage);
+  const [startIndex, setStartIndex] = useState(0);
+  const visible = 4;
+  const cardWidth = 286;
+  const gap = 60;
+  const peekWidth = Math.round(cardWidth / 2);
+  const viewportWidth = visible * cardWidth + (visible - 1) * gap + peekWidth;
+  const maxIndex = Math.max(books.length - visible, 0);
+  const translateX = startIndex * (cardWidth + gap);
+
+  const prev = () => setStartIndex((current) => Math.max(0, current - 1));
+  const next = () => setStartIndex((current) => Math.min(maxIndex, current + 1));
 
   return (
     <section className="bg-[#f6efe9] relative">
@@ -49,43 +60,46 @@ export default function MoreBooksGrid() {
           </p>
         </div>
 
-        {/* Pagination arrows (top right) */}
         <div className="flex gap-3 self-end">
           <button
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
-            disabled={page === 0}
+            onClick={prev}
+            disabled={startIndex === 0}
             className="w-[38px] h-[38px] flex items-center justify-center disabled:opacity-40"
           >
             <img src={chevronLeft} alt="Previous" className="w-full h-full -scale-y-100 rotate-90" />
           </button>
           <button
-            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-            disabled={page >= totalPages - 1}
+            onClick={next}
+            disabled={startIndex >= maxIndex}
             className="w-[38px] h-[38px] flex items-center justify-center disabled:opacity-40"
           >
             <img src={chevronRight} alt="Next" className="w-full h-full rotate-90" />
           </button>
         </div>
 
-        {/* Books grid */}
-        <div className="flex gap-12 items-end justify-center w-full">
-          {visible.map((book) => (
-            <div key={book.title} className="flex flex-col gap-6 items-start w-[286px]">
-              <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)]">
-                <img
-                  src={book.cover}
-                  alt={book.title}
-                  className="w-full h-full object-cover"
-                />
+        <div className="w-full overflow-hidden" style={{ maxWidth: `${viewportWidth}px` }}>
+          <div
+            className="flex gap-[60px] items-end transition-transform duration-500 ease-out will-change-transform"
+            style={{ transform: `translateX(-${translateX}px)` }}
+          >
+            {books.map((book, index) => (
+              <div key={`${book.title}-${index}`} className="flex flex-col gap-6 items-start w-[286px] shrink-0">
+                <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)]">
+                  <img
+                    src={book.cover}
+                    alt={book.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex items-start justify-between w-full gap-3 min-h-[88px]">
+                  <span className="font-['Sedan_SC'] text-black text-xl leading-[34px] flex-1">
+                    {book.title}
+                  </span>
+                  <RatingBadge rating={book.rating} />
+                </div>
               </div>
-              <div className="flex items-center justify-between w-full gap-3">
-                <span className="font-['Sedan_SC'] text-black text-xl leading-[34px]">
-                  {book.title}
-                </span>
-                <RatingBadge rating={book.rating} />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
