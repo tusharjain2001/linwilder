@@ -16,6 +16,10 @@ const books = [
   { title: 'MY NAME IS SAUL', rating: '4.7', cover: bookSaul },
   { title: 'THE RELUCTANT QUEEN', rating: '4.8', cover: bookReluctantQueen },
   { title: 'A PRICE FOR GENIUS', rating: '4.6', cover: bookPriceGenius },
+  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: bookPlausible },
+  { title: 'THE FRAGRANCE SHED BY A VIOLET', rating: '4.3', cover: bookFragrance },
+  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: bookNarrowPath },
+  { title: 'MY NAME IS SAUL', rating: '4.7', cover: bookSaul },
 ];
 
 function RatingBadge({ rating }) {
@@ -30,11 +34,15 @@ function RatingBadge({ rating }) {
 export default function FeaturedBooks() {
   const [startIndex, setStartIndex] = useState(0);
   const visible = 4;
+  const cardWidth = 286;
+  const gap = 32;
+  const peekWidth = Math.round(cardWidth / 2);
+  const viewportWidth = visible * cardWidth + (visible - 1) * gap + peekWidth;
+  const maxIndex = Math.max(books.length - visible, 0);
 
   const prev = () => setStartIndex((i) => Math.max(0, i - 1));
-  const next = () => setStartIndex((i) => Math.min(books.length - visible, i + 1));
-
-  const visibleBooks = books.slice(startIndex, startIndex + visible);
+  const next = () => setStartIndex((i) => Math.min(maxIndex, i + 1));
+  const translateX = startIndex * (cardWidth + gap);
 
   return (
     <section className="bg-[#e4e8d7] py-16">
@@ -60,32 +68,32 @@ export default function FeaturedBooks() {
 
         {/* Books carousel */}
         <div className="flex flex-col items-center gap-10">
-          <div className="flex gap-8 items-end justify-center w-full">
-            {visibleBooks.map((book, i) => {
-              const isFeatured = i === 1;
-              return (
+          <div className="w-full overflow-hidden" style={{ maxWidth: `${viewportWidth}px` }}>
+            <div
+              className="flex items-end gap-8 transition-transform duration-500 ease-out will-change-transform"
+              style={{ transform: `translateX(-${translateX}px)` }}
+            >
+              {books.map((book, i) => (
                 <div
-                  key={book.title}
-                  className={`flex flex-col gap-6 items-start ${isFeatured ? 'w-[328px]' : 'w-[286px]'}`}
+                  key={`${book.title}-${i}`}
+                  className="flex w-[286px] shrink-0 flex-col gap-6 items-start"
                 >
-                  <div
-                    className={`relative w-full shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] ${isFeatured ? 'h-[491px]' : 'h-[429px]'}`}
-                  >
+                  <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)]">
                     <img
                       src={book.cover}
                       alt={book.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex items-center gap-4 w-full">
+                  <div className="flex items-start gap-4 w-full min-h-[88px]">
                     <span className="font-['Sedan_SC'] text-black text-xl leading-[34px] flex-1">
                       {book.title}
                     </span>
                     <RatingBadge rating={book.rating} />
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
           {/* Navigation arrows */}
@@ -99,7 +107,7 @@ export default function FeaturedBooks() {
             </button>
             <button
               onClick={next}
-              disabled={startIndex >= books.length - visible}
+              disabled={startIndex >= maxIndex}
               className="w-[38px] h-[38px] flex items-center justify-center disabled:opacity-40"
             >
               <img src={chevronRight} alt="Next" className="w-full h-full rotate-90" />

@@ -58,7 +58,7 @@ export default function HeroSection() {
               </p>
             </div>
             <button className="bg-white flex items-center gap-2 px-5 py-2.5 rounded-[5px] h-[42px] hover:bg-opacity-90 transition">
-              <span className="font-['Questrial'] text-[#592c33] text-base uppercase whitespace-nowrap">
+              <span className="font-['Questrial'] font-bold text-[#592C33] text-base uppercase whitespace-nowrap">
                 EXPLORE MORE BOOKS from the author
               </span>
               <img src={arrowRight} alt="" className="w-6 h-6 rotate-90" />
