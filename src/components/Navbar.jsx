@@ -20,13 +20,14 @@ export default function Navbar() {
     <header className="w-full bg-[#f6efe9] px-16 pt-10 pb-4">
       <div className="max-w-[1300px] mx-auto flex flex-col gap-5">
         {/* Top row: logo + icons */}
-        <div className="flex items-center justify-between">
-          <Link to="/">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+          <div />
+          <Link to="/" className="justify-self-center">
             <h1 className="font-['Aboreto'] text-[#82483d] text-5xl uppercase tracking-wide leading-none">
               Lin Weeks Wilder
             </h1>
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-self-end">
             <img src={searchIcon} alt="Search" className="w-8 h-8 cursor-pointer" />
             <div className="flex gap-3">
               <button className="bg-[#592c33] w-[30px] h-[30px] rounded-full flex items-center justify-center">
@@ -53,8 +54,8 @@ export default function Navbar() {
               <Link
                 key={label}
                 to={path}
-                className={`font-['Questrial'] text-[#592c33] text-2xl whitespace-nowrap hover:opacity-70 transition-opacity ${
-                  isActive ? 'border-b border-[#592c33] pb-1' : ''
+                className={`font-['Questrial'] text-[#592c33] text-2xl whitespace-nowrap border-b pb-1 hover:opacity-70 transition-opacity ${
+                  isActive ? 'border-[#592c33]' : 'border-transparent'
                 }`}
               >
                 {label}
