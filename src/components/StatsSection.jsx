@@ -7,7 +7,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#f6efe9] py-16">
+    <section className="bg-[#E4E8D7] py-16">
       <div className="max-w-[1300px] mx-auto flex justify-center gap-16 flex-wrap">
         {stats.map((stat) => (
           <div key={stat.label} className="flex flex-col items-center gap-6 font-['Sedan_SC'] text-center">
