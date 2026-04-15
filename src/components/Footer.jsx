@@ -1,18 +1,25 @@
-import emailIcon from '../assets/images/email-icon.svg';
-import footerDivider from '../assets/images/footer-divider.svg';
-import twitterIcon from '../assets/images/social-twitter.svg';
-import facebookIcon from '../assets/images/social-facebook.svg';
+import emailIcon from "../assets/images/email-icon.svg";
+import twitterIcon from "../assets/images/red-twitter.svg";
+import amazonIcon from "../assets/images/red-amazon.svg";
+import googleIcon from "../assets/images/red-google.svg";
 
-const navLinks = ['Home', 'Book', 'About', 'Contact', 'Sunday Reflections', 'Review'];
-const booksCol1 = [
-  'Fragrance Shed by Violet',
-  'Finding The Narrow Path',
-  'Do You Solemnly Swear?',
-  'Malthus Revisited',
-  'A Price for Genius',
-  'I, Claudia',
+const navLinks = [
+  "Home",
+  "Book",
+  "About",
+  "Contact",
+  "Sunday Reflections",
+  "Review",
 ];
-const booksCol2 = ['My Name is Saul', 'Plausible Liars', 'The Reluctant Queen'];
+const booksCol1 = [
+  "Fragrance Shed by Violet",
+  "Finding The Narrow Path",
+  "Do You Solemnly Swear?",
+  "Malthus Revisited",
+  "A Price for Genius",
+  "I, Claudia",
+];
+const booksCol2 = ["My Name is Saul", "Plausible Liars", "The Reluctant Queen"];
 
 export default function Footer() {
   return (
@@ -27,13 +34,20 @@ export default function Footer() {
                 Lin Weeks Wilder
               </h2>
               <p className="font-['Questrial'] text-white text-base leading-[26px]">
-                Lin Wilder has a doctorate in Public Health from the UT Houston with a background
-                in cardiopulmonary physiology, medical ethics, and hospital administration
+                Lin Wilder has a doctorate in Public Health from the UT Houston
+                with a background in cardiopulmonary physiology, medical ethics,
+                and hospital administration
               </p>
             </div>
-            <span className="font-['Sedan_SC'] text-white text-xl leading-6">Contact Info</span>
+            <span className="font-['Sedan_SC'] text-white text-xl leading-6">
+              Contact Info
+            </span>
             <div className="flex items-center gap-2">
-              <img src={emailIcon} alt="Email" className="w-5 h-4 flex-shrink-0" />
+              <img
+                src={emailIcon}
+                alt="Email"
+                className="w-5 h-4 flex-shrink-0"
+              />
               <span className="font-['Questrial'] text-[#f6efe9] text-base leading-5">
                 linwilder@gmail.com
               </span>
@@ -44,9 +58,15 @@ export default function Footer() {
           <div className="flex gap-10 items-start">
             {/* Navigation */}
             <div className="flex flex-col gap-2 w-[142px]">
-              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">NAVIGATION</span>
+              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">
+                NAVIGATION
+              </span>
               {navLinks.map((link) => (
-                <a key={link} href="#" className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition">
+                <a
+                  key={link}
+                  href="#"
+                  className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition"
+                >
                   {link}
                 </a>
               ))}
@@ -54,9 +74,15 @@ export default function Footer() {
 
             {/* Books col 1 */}
             <div className="flex flex-col gap-2 w-[195px]">
-              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">BOOKS</span>
+              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">
+                BOOKS
+              </span>
               {booksCol1.map((book) => (
-                <a key={book} href="#" className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition">
+                <a
+                  key={book}
+                  href="#"
+                  className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition"
+                >
                   {book}
                 </a>
               ))}
@@ -64,9 +90,15 @@ export default function Footer() {
 
             {/* Books col 2 */}
             <div className="flex flex-col gap-2 w-[195px]">
-              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">BOOKS</span>
+              <span className="font-['Sedan_SC'] text-[#efd3b1] text-xl leading-6">
+                BOOKS
+              </span>
               {booksCol2.map((book) => (
-                <a key={book} href="#" className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition">
+                <a
+                  key={book}
+                  href="#"
+                  className="font-['Questrial'] text-white text-base leading-[26px] hover:text-[#efd3b1] transition"
+                >
                   {book}
                 </a>
               ))}
@@ -91,13 +123,25 @@ export default function Footer() {
           {/* Social icons */}
           <div className="flex gap-5 items-center">
             <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <img src={twitterIcon} alt="Twitter" className="w-[15px] h-[15px]" style={{ filter: 'invert(21%) sepia(42%) saturate(700%) hue-rotate(310deg) brightness(80%)' }} />
+              <img
+                src={twitterIcon}
+                alt="Twitter"
+                className="w-[15px] h-[15px]"
+              />
             </button>
             <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <span className="text-[#592c33] font-['Font_Awesome_5_Brands'] text-[15px] leading-[15px]">&#xf3a9;</span>
+              <img
+                src={googleIcon}
+                alt="Google"
+                className="w-[15px] h-[15px]"
+              />
             </button>
             <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <img src={facebookIcon} alt="Facebook" className="w-[15px] h-[15px]" style={{ filter: 'invert(21%) sepia(42%) saturate(700%) hue-rotate(310deg) brightness(80%)' }} />
+              <img
+                src={amazonIcon}
+                alt="Amazon"
+                className="w-[15px] h-[15px]"
+              />
             </button>
           </div>
         </div>
