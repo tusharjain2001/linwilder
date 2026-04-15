@@ -5,7 +5,7 @@ import arrowRight from '../assets/images/arrow-right-dark.svg';
 export default function AuthorSection() {
   return (
     <section className="bg-[#efd3b1] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto flex items-stretch min-h-[635px]">
+      <div className=" flex items-stretch min-h-[635px]">
         {/* Left content */}
         <div className="flex flex-col gap-[18px] justify-center pl-16 pr-8 py-16 flex-1 max-w-[680px]">
           <div className="flex flex-col gap-2.5">
