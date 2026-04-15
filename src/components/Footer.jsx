@@ -20,6 +20,19 @@ const booksCol1 = [
   "I, Claudia",
 ];
 const booksCol2 = ["My Name is Saul", "Plausible Liars", "The Reluctant Queen"];
+const socialLinks = [
+  { href: "https://x.com/LinWilder", icon: twitterIcon, alt: "X" },
+  {
+    href: "https://www.goodreads.com/author/show/7944373.Lin_Wilder",
+    icon: googleIcon,
+    alt: "Goodreads",
+  },
+  {
+    href: "https://www.amazon.com/stores/Dr.-Lin-Wilder/author/B007L380OM?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true",
+    icon: amazonIcon,
+    alt: "Amazon",
+  },
+];
 
 export default function Footer() {
   return (
@@ -122,27 +135,22 @@ export default function Footer() {
 
           {/* Social icons */}
           <div className="flex gap-5 items-center">
-            <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <img
-                src={twitterIcon}
-                alt="Twitter"
-                className="w-[15px] h-[15px]"
-              />
-            </button>
-            <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <img
-                src={googleIcon}
-                alt="Google"
-                className="w-[15px] h-[15px]"
-              />
-            </button>
-            <button className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <img
-                src={amazonIcon}
-                alt="Amazon"
-                className="w-[15px] h-[15px]"
-              />
-            </button>
+            {socialLinks.map(({ href, icon, alt }) => (
+              <a
+                key={alt}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-white w-[30px] h-[30px] rounded-full flex items-center justify-center"
+                aria-label={alt}
+              >
+                <img
+                  src={icon}
+                  alt={alt}
+                  className="w-[15px] h-[15px]"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
