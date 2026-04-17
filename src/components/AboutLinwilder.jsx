@@ -2,7 +2,7 @@ import aboutBg from '../assets/images/about-bg.svg';
 
 export default function AboutLinwilder() {
   return (
-    <section className="relative w-full h-[260px] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[260px] overflow-hidden flex items-center justify-center z-20">
       {/* Background */}
       <img
         src={aboutBg}

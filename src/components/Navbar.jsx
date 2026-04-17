@@ -31,7 +31,7 @@ export default function Navbar() {
   const { pathname } = useLocation();
 
   return (
-    <header className="w-full bg-[#f6efe9] px-16 pt-10 pb-4">
+    <header className="sticky top-0 z-50 w-full bg-[#f6efe9] px-16 pt-10 pb-4">
       <div className="max-w-[1300px] mx-auto flex flex-col gap-5">
         {/* Top row: logo + icons */}
         <div className="grid grid-cols-[1fr_auto_1fr] items-center">
@@ -71,7 +71,7 @@ export default function Navbar() {
               <Link
                 key={label}
                 to={path}
-                className={`font-['Questrial'] text-[#592c33] text-2xl whitespace-nowrap border-b pb-1 hover:opacity-70 transition-opacity ${
+                className={`font-['Questrial'] text-[#592c33] text-2xl uppercase whitespace-nowrap border-b pb-1 hover:opacity-70 transition-opacity ${
                   isActive ? 'border-[#592c33]' : 'border-transparent'
                 }`}
               >

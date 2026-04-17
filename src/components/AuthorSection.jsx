@@ -1,11 +1,11 @@
-import authorPhoto from '../assets/images/author-photo.png';
+import authorPhoto from '../assets/images/author-photo.svg';
 import authorSignature from '../assets/images/author-signature.png';
 import arrowRight from '../assets/images/arrow-right-dark.svg';
 
 export default function AuthorSection() {
   return (
-    <section className="bg-[#efd3b1] overflow-hidden">
-      <div className=" flex items-stretch min-h-[635px]">
+    <section className="bg-[#efd3b1] overflow-hidden mt-[-48px]">
+      <div className=" flex items-stretch justify-between min-h-[635px]">
         {/* Left content */}
         <div className="flex flex-col gap-[18px] justify-center pl-16 pr-8 py-16 flex-1 max-w-[680px]">
           <div className="flex flex-col gap-2.5">
@@ -43,13 +43,13 @@ export default function AuthorSection() {
         </div>
 
         {/* Right: author photo with gradient overlay */}
-        <div className="relative flex-1 overflow-hidden">
+        <div className="relative flex-1 flex items-end justify-end">
           {/* Left gradient fade */}
-          <div className="absolute left-0 top-0 h-full w-[296px] bg-gradient-to-r from-[#efd3b1] to-transparent z-10" />
+          
           <img
             src={authorPhoto}
             alt="Lin Wilder"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="object-contain"
           />
         </div>
       </div>

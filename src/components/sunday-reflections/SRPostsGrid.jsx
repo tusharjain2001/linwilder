@@ -97,7 +97,7 @@ function PostCard({ post }) {
 export default function SRPostsGrid() {
   return (
     <section className="bg-[#f6efe9] py-10 px-20">
-      <div className="grid grid-cols-3 gap-0 max-w-[1280px] mx-auto">
+      <div className="grid grid-cols-3 gap-6 max-w-[1280px] mx-auto">
         {posts.map((post) => (
           <PostCard key={post.title} post={post} />
         ))}
