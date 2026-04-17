@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma__get_metadata",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(curl -L -o hero-book.png \"https://www.figma.com/api/mcp/asset/81a112b1-decc-45cb-a162-7fc8415f7d68\")",
+      "Bash(curl -L -o award-1.png \"https://www.figma.com/api/mcp/asset/750d0d42-52c6-4e67-9e9f-745099253df4\")",
+      "Bash(curl -L -o award-2.png \"https://www.figma.com/api/mcp/asset/45e3311e-8c14-48e3-9526-8142090e7471\")",
+      "Bash(curl -L -o award-3.png \"https://www.figma.com/api/mcp/asset/da837c8e-3cf7-4114-a103-2a6cb1507543\")",
+      "Bash(curl -L -o hero-ellipse.png \"https://www.figma.com/api/mcp/asset/fbe6cf4d-5d9e-4456-8603-4bffae8b7d78\")",
+      "Bash(curl -L -o hero-bg.png \"https://www.figma.com/api/mcp/asset/3068807c-2b21-40db-9b74-cc56453b7858\")",
+      "Bash(curl -L -o book-cover.png \"https://www.figma.com/api/mcp/asset/fb83cedc-c6ce-47a2-9203-ba3240e8bdde\" -o book-cover.png)",
+      "Bash(wait)",
+      "Bash(curl -L -o award-1.png \"https://www.figma.com/api/mcp/asset/3c114f51-aa6e-4f79-93b1-bff9f5f2435c\")",
+      "Bash(curl -L -o award-2.png \"https://www.figma.com/api/mcp/asset/8fb4cc5e-f4f3-46d2-ba33-86419be8eab7\")",
+      "Bash(curl -L -o award-3.png \"https://www.figma.com/api/mcp/asset/65da7de7-281e-49da-b732-0ae0322a7d6c\")",
+      "Bash(curl -L -o arrow-right.svg \"https://www.figma.com/api/mcp/asset/f96203a9-c81c-42b6-a22e-4a7716f8bced\")",
+      "Bash(curl -L -o torn-edge.svg \"https://www.figma.com/api/mcp/asset/13dc3064-b2f0-49b4-901d-abb7beb6d757\")",
+      "Bash(curl -L -o book-cover.png \"https://www.figma.com/api/mcp/asset/fb83cedc-c6ce-47a2-9203-ba3240e8bdde\")"
+    ]
+  }
+}
