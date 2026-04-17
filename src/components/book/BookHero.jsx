@@ -4,7 +4,7 @@ import arrowRight from "../../assets/images/arrow-right.svg";
 
 export default function BookHero() {
   return (
-    <section className="bg-[#e4e8d7]  relative overflow-hidden flex items-center">
+    <section className="bg-[#e4e8d7] relative overflow-hidden flex items-center">
       <div className=" px-20 py-20 grid grid-cols-[430px_minmax(0,1fr)] items-center gap-20 w-full">
         {/* Left: combined book hero artwork */}
         <div className="relative justify-self-center w-[475px]">

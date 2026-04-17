@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import sectionBanner from '../../assets/images/book/section-banner.svg';
+import zigzag from '../../assets/images/zigzag.svg';
 import coverPlausible from '../../assets/images/book/cover-plausible-liars.png';
 import coverNarrowPath from '../../assets/images/book/cover-narrow-path.png';
 import coverSaul from '../../assets/images/book/cover-my-name-is-saul.png';
@@ -42,13 +42,12 @@ export default function MoreBooksGrid() {
   const next = () => setStartIndex((current) => Math.min(maxIndex, current + 1));
 
   return (
-    <section className="bg-[#f6efe9] relative">
-      {/* Decorative banner strip */}
-      <div className="w-full overflow-hidden h-[123px]">
-        <img src={sectionBanner} alt="" className="w-full h-full object-cover" />
+    <section className="bg-[#f6efe9] relative z-10 pt-[72px]">
+      <div className="absolute left-0 top-[-66px] w-full pointer-events-none">
+        <img src={zigzag} alt="" className="w-full h-auto block" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-8 pb-20 flex flex-col items-center gap-12">
+      <div className="max-w-[1400px] mx-auto px-8 pb-20 flex flex-col items-center gap-12 relative z-10">
         {/* Header */}
         <div className="flex flex-col items-center gap-5 text-center max-w-[686px]">
           <h2 className="font-['Sedan_SC'] text-black text-[32px] leading-[34px]">
