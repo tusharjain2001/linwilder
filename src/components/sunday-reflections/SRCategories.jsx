@@ -1,42 +1,42 @@
-import { useState } from 'react';
+function chunkCategories(categories, size) {
+  const rows = [];
 
-const categoryRows = [
-  ['Atheism', 'Christianity', 'Doberman', 'Dogs', 'Fear', 'Happiness', 'Books', 'Historical Fiction'],
-  ['Claudia', 'Medical Mystery', 'Movies', 'Music', 'My Name is Saul', 'Peace', 'Thanksgiving'],
-  ['WorkWriting', 'Public speaking', 'Prayer', 'Politics'],
-];
+  for (let index = 0; index < categories.length; index += size) {
+    rows.push(categories.slice(index, index + size));
+  }
 
-export default function SRCategories() {
-  const [active, setActive] = useState('Atheism');
+  return rows;
+}
+
+export default function SRCategories({ categories, activeCategory, onSelectCategory }) {
+  const categoryRows = chunkCategories(categories, 6);
 
   return (
     <section className="bg-[#f6efe9] py-12 px-8">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-5">
-        {/* Heading */}
         <h2 className="font-['Sedan_SC'] text-black text-[48px] leading-[56px] text-center mb-2">
           categories
         </h2>
 
-        {/* Category rows with dividers */}
         {categoryRows.map((row, rowIdx) => (
           <div key={rowIdx}>
-            {/* Top divider */}
             <div className="w-full h-px bg-[#592c33] opacity-20 mb-5" />
 
-            <div className="flex flex-wrap gap-x-[70px] gap-y-3 items-center justify-center font-['Questrial'] text-[23.5px] text-center whitespace-nowrap">
-              {row.map((cat) => {
-                const isActive = active === cat;
+            <div className="flex flex-wrap gap-x-[50px] gap-y-3 items-center justify-center font-['Questrial'] text-[23.5px] text-center">
+              {row.map((category) => {
+                const isActive = activeCategory === category;
+
                 return (
                   <button
-                    key={cat}
-                    onClick={() => setActive(cat)}
+                    key={category}
+                    onClick={() => onSelectCategory(category)}
                     className={`leading-[34px] transition-colors ${
                       isActive
                         ? 'text-[#592c33] underline underline-offset-2'
                         : 'text-[#595959] hover:text-[#592c33]'
                     }`}
                   >
-                    {cat}
+                    {category}
                   </button>
                 );
               })}
@@ -44,7 +44,6 @@ export default function SRCategories() {
           </div>
         ))}
 
-        {/* Bottom divider */}
         <div className="w-full h-px bg-[#592c33] opacity-20 mt-2" />
       </div>
     </section>
