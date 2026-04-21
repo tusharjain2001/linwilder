@@ -13,7 +13,7 @@ export default function NewsletterSection() {
     <section className="bg-[#e4e8d7] px-8 py-20">
       <div className="max-w-[1200px] mx-auto flex items-center gap-24">
         {/* Heading */}
-        <h2 className="font-['Sedan_SC'] text-[#592c33] text-[32px] leading-[30px] max-w-[556px]">
+        <h2 className="font-['Sedan_SC'] uppercase text-[#592c33] text-[32px] leading-snug max-w-[700px]">
           Sign Up for The Sunday Reflections on Writing, Tour, and More
         </h2>
 

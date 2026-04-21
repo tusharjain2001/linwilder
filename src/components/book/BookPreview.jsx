@@ -34,7 +34,7 @@ export default function BookPreview() {
             <img
               src={chevronLeft}
               alt="Previous page"
-              className="w-full h-full -scale-y-100 rotate-90"
+              className="w-full h-full -scale-y-100 rotate-90 brightness-0 invert"
             />
           </button>
 
@@ -54,7 +54,7 @@ export default function BookPreview() {
             <img
               src={chevronRight}
               alt="Next page"
-              className="w-full h-full rotate-90"
+              className="w-full h-full rotate-90 brightness-0 invert"
             />
           </button>
         </div>

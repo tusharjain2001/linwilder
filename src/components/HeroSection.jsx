@@ -19,7 +19,7 @@ export default function HeroSection() {
               className="w-full h-114.5 object-cover"
             />
             <p className="absolute inset-0 flex items-center justify-center font-['Questrial'] text-[#9d674d] text-[32px] capitalize text-center px-10 leading-8.5">
-              faith, healing, medicine, and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; personal transformation
+              faith, healing, medicine, and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; personal transformation
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function HeroSection() {
             <div className="flex flex-col gap-14 flex-1">
               {/* Awards + tagline */}
               <div className="flex flex-col gap-3.25">
-                <div className="flex items-center">
+                <div className="flex items-center gap-5">
                   <img
                     src={award1}
                     alt="Award 1"

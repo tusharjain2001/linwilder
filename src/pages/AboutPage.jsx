@@ -10,7 +10,7 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <AboutBio />
-      <StatsSection />
+      <StatsSection className="bg-[#e4e8d7]" />
       <AboutAwards />
       <AboutFreshRead />
       <TestimonialsSection />

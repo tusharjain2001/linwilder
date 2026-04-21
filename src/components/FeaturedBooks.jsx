@@ -68,7 +68,7 @@ export default function FeaturedBooks() {
 
         {/* Books carousel */}
         <div className="flex flex-col items-center gap-10">
-          <div className="w-full overflow-hidden" style={{ maxWidth: `${viewportWidth}px` }}>
+          <div className="w-full overflow-hidden px-4 py-5" style={{ maxWidth: `${viewportWidth + 32}px` }}>
             <div
               className="flex items-end gap-8 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${translateX}px)` }}
@@ -78,7 +78,7 @@ export default function FeaturedBooks() {
                   key={`${book.title}-${i}`}
                   className="flex w-[286px] shrink-0 flex-col gap-6 items-start"
                 >
-                  <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)]">
+                  <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:shadow-[14px_18px_24px_0px_rgba(0,0,0,0.28)]">
                     <img
                       src={book.cover}
                       alt={book.title}

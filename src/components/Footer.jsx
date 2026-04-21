@@ -52,7 +52,7 @@ export default function Footer() {
                 and hospital administration
               </p>
             </div>
-            <span className="font-['Sedan_SC'] text-white text-xl leading-6">
+            <span className="font-['Sedan_SC'] uppercase text-white text-lg leading-6">
               Contact Info
             </span>
             <div className="flex items-center gap-2">

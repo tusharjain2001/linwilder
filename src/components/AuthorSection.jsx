@@ -7,7 +7,7 @@ export default function AuthorSection() {
     <section className="bg-[#efd3b1] overflow-hidden mt-[-48px]">
       <div className=" flex items-stretch justify-between min-h-[635px]">
         {/* Left content */}
-        <div className="flex flex-col gap-[18px] justify-center pl-16 pr-8 py-16 flex-1 max-w-[680px]">
+        <div className="flex flex-col gap-[18px] justify-center ml-20 pl-16 pr-8 py-16 flex-1 max-w-[680px]">
           <div className="flex flex-col gap-2.5">
             <h2 className="font-['Aboreto'] text-[#592c33] text-[48px] uppercase leading-[107px]">
               Lin Wilder

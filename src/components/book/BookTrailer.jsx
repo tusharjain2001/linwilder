@@ -1,5 +1,5 @@
 import trailerThumb from '../../assets/images/book/trailer-thumb.png';
-import playBtn from '../../assets/images/play-btn.svg';
+// import playBtn from '../../assets/images/play-btn.svg';
 
 export default function BookTrailer() {
   return (
@@ -16,11 +16,11 @@ export default function BookTrailer() {
             className="w-full h-full object-cover"
           />
           {/* Play overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/25 transition">
+          {/* <div className="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/25 transition">
             <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               <img src={playBtn} alt="Play trailer" className="w-8 h-8 ml-1" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
