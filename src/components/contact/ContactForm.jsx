@@ -3,22 +3,22 @@ export default function ContactForm() {
     <section className="bg-[#f6efe9] py-20 px-8">
       <div className="max-w-[1027px] mx-auto bg-white rounded-[10px] px-[74px] py-[64px]">
         {/* Top label */}
-        <p className="font-['Questrial'] text-[#592c33] text-base uppercase tracking-wide mb-3">
+        <p className="font-['Questrial'] text-black text-base uppercase tracking-wide mb-3">
           Get In Touch
         </p>
 
         {/* Heading */}
-        <h1 className="font-['Sedan_SC'] text-[#592c33] text-[36px] leading-[44px] mb-4">
+        <h1 className="font-['Sedan_SC'] text-black text-[36px] leading-[44px] mb-4">
           Have a Question? Contact Us
         </h1>
 
         {/* Description */}
-        <p className="font-['Questrial'] text-[#595959] text-base leading-7 max-w-[600px] mb-4">
-          Whether you have a question about my books, want to share your thoughts, or simply wish to connect, I'd love to hear from you.
+        <p className="font-['Questrial'] text-black text-base leading-7 max-w-[600px] mb-4">
+          If you would like more information about any of my books please do not hesitate to contact me with the below form.
         </p>
 
         {/* Email */}
-        <p className="font-['Questrial'] text-[#592c33] text-xl leading-8 mb-8">
+        <p className="font-['Questrial'] text-black text-xl leading-8 mb-8">
           Email: linwilder@gmail.com
         </p>
 
