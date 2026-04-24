@@ -51,56 +51,51 @@ export default function TestimonialsSection() {
   const next = () => setActiveIndex((index) => Math.min(index + 1, maxIndex));
 
   return (
-    <section className="relative w-full min-h-[668px] overflow-hidden mt-[-75px] flex items-center">
-      {/* Background */}
+    <section className="relative flex w-full items-center overflow-hidden pt-0 lg:mt-[-75px] lg:min-h-[668px] lg:pt-0">
       <img
         src={testimonialsBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute left-0 top-0 h-full w-full object-cover lg:inset-0 lg:h-full"
       />
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-8 py-20 flex flex-col gap-16 items-center">
-        {/* Header */}
-        <div className="flex flex-col items-center gap-5 text-center">
-          <div className="border border-[#b83431] px-5 py-1 rounded-[19px]">
-            <span className="font-['Questrial'] text-[#b83431] text-base uppercase leading-[18px]">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-8 px-4 py-10 sm:px-6 lg:gap-16 lg:px-8 lg:py-20">
+        <div className="flex flex-col items-center gap-4 text-center lg:gap-5">
+          <div className="rounded-[19px] border border-[#b83431] px-5 py-[5px] lg:py-1">
+            <span className="font-['Questrial'] text-[12px] uppercase leading-[18px] text-[#b83431] lg:text-base">
               TESTIMONIALS
             </span>
           </div>
-          <h2 className="font-['Sedan_SC'] text-black text-[32px] leading-[34px]">
+          <h2 className="max-w-[280px] font-['Sedan_SC'] text-[20px] leading-[1.45] text-black lg:max-w-none lg:text-[32px] lg:leading-[34px]">
             WHAT PEOPLE SAY ABOUT PLAUSIBLE LIARS
           </h2>
         </div>
 
-        {/* Testimonial carousel */}
-        <div className="flex items-center gap-12 w-full">
-          {/* Prev */}
+        <div className="w-full lg:flex lg:items-center lg:gap-12">
           <button
             onClick={prev}
             disabled={activeIndex === 0}
-            className="flex-shrink-0 w-[38px] h-[38px] disabled:opacity-40 transition-opacity"
+            className="hidden h-[38px] w-[38px] flex-shrink-0 transition-opacity disabled:opacity-40 lg:block"
           >
-            <img src={chevronLeft} alt="Previous" className="w-full h-full -scale-y-100 rotate-90" />
+            <img src={chevronLeft} alt="Previous" className="h-full w-full -scale-y-100 rotate-90" />
           </button>
 
-          {/* Card */}
           <div className="flex-1 overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={`${testimonial.author}-${index}`} className="relative w-full shrink-0 px-[2px] pt-[14px]">
-                  <div className="absolute right-[77px] top-0 w-[61px] h-[39px] z-10">
-                    <img src={quoteIcon} alt="" className="w-full h-full" />
+                <div key={`${testimonial.author}-${index}`} className="relative w-full shrink-0 px-[2px] pt-[14px] lg:pt-[14px]">
+                  <div className="absolute right-[18px] top-0 z-10 h-[26px] w-[41px] lg:right-[77px] lg:h-[39px] lg:w-[61px]">
+                    <img src={quoteIcon} alt="" className="h-full w-full" />
                   </div>
 
-                  <div className="bg-white rounded-[10px] shadow-[1px_1px_4px_0px_rgba(0,0,0,0.25)] px-7 py-11 min-h-[317px] flex items-center">
-                    <div className="flex flex-col gap-5 w-full max-w-[955px] mx-auto">
-                      <p className="font-['Questrial'] text-[#595959] text-xl leading-8">
+                  <div className="flex min-h-[241px] items-center rounded-[8px] bg-white px-6 py-10 shadow-[1px_1px_4px_0px_rgba(0,0,0,0.12)] lg:min-h-[317px] lg:rounded-[10px] lg:px-7 lg:py-11 lg:shadow-[1px_1px_4px_0px_rgba(0,0,0,0.25)]">
+                    <div className="mx-auto flex w-full max-w-[955px] flex-col gap-3 text-center lg:gap-5 lg:text-left">
+                      <p className="font-['Questrial'] text-[12px] leading-[16px] text-[#595959] lg:text-xl lg:leading-8">
                         {testimonial.text}
                       </p>
-                      <p className="font-['Questrial'] text-[#592c33] text-base">
+                      <p className="font-['Questrial'] text-[12px] text-[#592c33] lg:text-base">
                         {testimonial.author}
                       </p>
                     </div>
@@ -110,13 +105,12 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Next */}
           <button
             onClick={next}
             disabled={activeIndex === maxIndex}
-            className="flex-shrink-0 w-[38px] h-[38px] disabled:opacity-40 transition-opacity"
+            className="hidden h-[38px] w-[38px] flex-shrink-0 transition-opacity disabled:opacity-40 lg:block"
           >
-            <img src={chevronRight} alt="Next" className="w-full h-full rotate-90" />
+            <img src={chevronRight} alt="Next" className="h-full w-full rotate-90" />
           </button>
         </div>
 

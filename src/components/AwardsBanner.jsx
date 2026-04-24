@@ -2,42 +2,38 @@ import bookCover from '../assets/images/book-plausible-liars.png';
 
 export default function AwardsBanner() {
   return (
-    <section className="bg-[#592c33] py-10 px-10 relative overflow-visible z-30">
-      <div className="max-w-[1200px] mx-auto flex items-center gap-16 lg:pr-[260px]">
-        {/* Award 1 */}
-        <div className="flex flex-col gap-1 w-[478px]">
-          <p className="font-['Sedan_SC'] text-white text-lg leading-8">
+    <section className="relative z-30 overflow-visible bg-[#592c33] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 lg:pr-[260px]">
+        <div className="flex max-w-[235px] flex-col gap-2 lg:w-[478px] lg:max-w-none lg:gap-1">
+          <p className="font-['Sedan_SC'] text-[16px] leading-[21px] text-white lg:text-lg lg:leading-8">
             CELEBRATING EXCELLENCE{' '}
             <span className="text-[#efd3b1]">"PLAUSIBLE LIARS"</span>
           </p>
-          <p className="font-['Questrial'] text-white text-lg leading-[21px]">
+          <p className="font-['Questrial'] text-[12px] leading-[17px] text-white lg:text-lg lg:leading-[21px]">
             Honored as a Book Excellence Award Finalist in the Medical category.
             Selected from thousands of entries worldwide.
           </p>
         </div>
 
-        {/* Vertical divider */}
-        <div className="flex-shrink-0 h-[53px] w-px bg-white opacity-40" />
+        <div className="hidden h-[53px] w-px flex-shrink-0 bg-white opacity-40 lg:block" />
 
-        {/* Award 2 */}
-        <div className="flex flex-col gap-1 w-[347px]">
-          <p className="font-['Sedan_SC'] text-white text-lg leading-8">
+        <div className="hidden w-[347px] flex-col gap-1 lg:flex">
+          <p className="font-['Sedan_SC'] text-lg leading-8 text-white">
             CELEBRATING <span className="text-[#efd3b1]">LINWILDER</span>
           </p>
-          <p className="font-['Questrial'] text-white text-lg leading-[21px]">
+          <p className="font-['Questrial'] text-lg leading-[21px] text-white">
             New Award reader's FAVOURITE Best Books of 2024 for Mystery-Legal Fiction
           </p>
         </div>
-      </div>
 
-      {/* Tilted book cover */}
-      <div className="absolute right-4 md:right-[110px] top-[-54px] z-30 flex items-center justify-center h-[255px] w-[203px]">
-        <div className="rotate-[15.25deg] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] w-[149px] h-[224px]">
+        <div className="flex shrink-0 items-center justify-center lg:absolute lg:right-4 lg:top-[-54px] lg:h-[255px] lg:w-[203px] md:lg:right-[110px]">
+          <div className="h-[136px] w-[91px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] lg:h-[224px] lg:w-[149px] lg:rotate-[15.25deg]">
           <img
             src={bookCover}
             alt="Plausible Liars"
             className="w-full h-full object-cover"
           />
+          </div>
         </div>
       </div>
     </section>
