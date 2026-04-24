@@ -1,27 +1,32 @@
+import { Link } from "react-router-dom";
 import emailIcon from "../assets/images/email-icon.svg";
 import twitterIcon from "../assets/images/red-twitter.svg";
 import amazonIcon from "../assets/images/red-amazon.svg";
 import googleIcon from "../assets/images/red-google.svg";
 
 const navLinks = [
-  "Home",
-  "Book",
-  "About",
-  "Contact",
-  "Sunday Reflections",
-  "Review",
+  { label: "Home", path: "/" },
+  { label: "Book", path: "/book" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+  { label: "Sunday Reflections", path: "/sunday-reflections" },
+  { label: "Review", path: "/review" },
 ];
 
 const booksCol1 = [
-  "Fragrance Shed by Violet",
-  "Finding The Narrow Path",
-  "Do You Solemnly Swear?",
-  "Malthus Revisited",
-  "A Price for Genius",
-  "I, Claudia",
+  { label: "Fragrance Shed by Violet", path: "/book" },
+  { label: "Finding The Narrow Path", path: "/book" },
+  { label: "Do You Solemnly Swear?", path: "/book" },
+  { label: "Malthus Revisited", path: "/book" },
+  { label: "A Price for Genius", path: "/book" },
+  { label: "I, Claudia", path: "/book" },
 ];
 
-const booksCol2 = ["My Name is Saul", "Plausible Liars", "The Reluctant Queen"];
+const booksCol2 = [
+  { label: "My Name is Saul", path: "/book" },
+  { label: "Plausible Liars", path: "/book" },
+  { label: "The Reluctant Queen", path: "/book" },
+];
 
 const socialLinks = [
   { href: "https://x.com/LinWilder", icon: twitterIcon, alt: "X" },
@@ -68,14 +73,14 @@ export default function Footer() {
               <span className="font-['Sedan_SC'] text-[16px] leading-6 text-[#efd3b1]">
                 NAVIGATION
               </span>
-              {navLinks.map((link) => (
-                <a
-                  key={link}
-                  href="#"
+              {navLinks.map(({ label, path }) => (
+                <Link
+                  key={label}
+                  to={path}
                   className="font-['Questrial'] text-[12px] leading-[24px] text-white transition hover:text-[#efd3b1]"
                 >
-                  {link}
-                </a>
+                  {label}
+                </Link>
               ))}
             </div>
 
@@ -83,14 +88,14 @@ export default function Footer() {
               <span className="font-['Sedan_SC'] text-[16px] leading-6 text-[#efd3b1]">
                 BOOKS
               </span>
-              {[...booksCol1, ...booksCol2].map((book) => (
-                <a
-                  key={book}
-                  href="#"
+              {[...booksCol1, ...booksCol2].map(({ label, path }) => (
+                <Link
+                  key={label}
+                  to={path}
                   className="font-['Questrial'] text-[12px] leading-[24px] text-white transition hover:text-[#efd3b1]"
                 >
-                  {book}
-                </a>
+                  {label}
+                </Link>
               ))}
             </div>
           </div>
@@ -153,14 +158,14 @@ export default function Footer() {
                 <span className="font-['Sedan_SC'] text-xl leading-6 text-[#efd3b1]">
                   NAVIGATION
                 </span>
-                {navLinks.map((link) => (
-                  <a
-                    key={link}
-                    href="#"
+                {navLinks.map(({ label, path }) => (
+                  <Link
+                    key={label}
+                    to={path}
                     className="font-['Questrial'] text-base leading-[26px] text-white transition hover:text-[#efd3b1]"
                   >
-                    {link}
-                  </a>
+                    {label}
+                  </Link>
                 ))}
               </div>
 
@@ -168,14 +173,14 @@ export default function Footer() {
                 <span className="font-['Sedan_SC'] text-xl leading-6 text-[#efd3b1]">
                   BOOKS
                 </span>
-                {booksCol1.map((book) => (
-                  <a
-                    key={book}
-                    href="#"
+                {booksCol1.map(({ label, path }) => (
+                  <Link
+                    key={label}
+                    to={path}
                     className="font-['Questrial'] text-base leading-[26px] text-white transition hover:text-[#efd3b1]"
                   >
-                    {book}
-                  </a>
+                    {label}
+                  </Link>
                 ))}
               </div>
 
@@ -183,14 +188,14 @@ export default function Footer() {
                 <span className="font-['Sedan_SC'] text-xl leading-6 text-[#efd3b1]">
                   BOOKS
                 </span>
-                {booksCol2.map((book) => (
-                  <a
-                    key={book}
-                    href="#"
+                {booksCol2.map(({ label, path }) => (
+                  <Link
+                    key={label}
+                    to={path}
                     className="font-['Questrial'] text-base leading-[26px] text-white transition hover:text-[#efd3b1]"
                   >
-                    {book}
-                  </a>
+                    {label}
+                  </Link>
                 ))}
               </div>
             </div>
