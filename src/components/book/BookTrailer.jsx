@@ -3,17 +3,17 @@ import trailerThumb from '../../assets/images/book/trailer-thumb.png';
 
 export default function BookTrailer() {
   return (
-    <section className="bg-[#efd3b1] py-16 px-8">
-      <div className="max-w-[1297px] mx-auto flex flex-col gap-6 items-center">
-        <h2 className="font-['Sedan_SC'] text-[#111] text-[40px] leading-[62px] text-center">
+    <section className="bg-[#efd3b1] px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto flex max-w-[1297px] flex-col items-center gap-4 lg:gap-6">
+        <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.2] text-[#111] text-center lg:text-[40px] lg:leading-[62px]">
           Book Trailer
         </h2>
 
-        <div className="relative w-full h-[501px] rounded-[10px] overflow-hidden cursor-pointer group">
+        <div className="group relative w-full max-w-[320px] cursor-pointer overflow-hidden rounded-[10px] lg:h-[501px] lg:max-w-none">
           <img
             src={trailerThumb}
             alt="Book trailer thumbnail"
-            className="w-full h-full object-cover"
+            className="h-auto w-full object-cover lg:h-full"
           />
           {/* Play overlay */}
           {/* <div className="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/25 transition">

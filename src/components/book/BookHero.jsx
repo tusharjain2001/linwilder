@@ -4,32 +4,30 @@ import arrowRight from "../../assets/images/arrow-right.svg";
 
 export default function BookHero() {
   return (
-    <section className="bg-[#e4e8d7] relative overflow-hidden flex items-center">
-      <div className=" px-20 py-20 grid grid-cols-[430px_minmax(0,1fr)] items-center gap-20 w-full">
-        {/* Left: combined book hero artwork */}
-        <div className="relative justify-self-center w-[475px]">
+    <section className="relative flex items-center overflow-hidden bg-[#e4e8d7]">
+      <div className="grid w-full items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[430px_minmax(0,1fr)] lg:gap-20 lg:px-20 lg:py-20">
+        <div className="relative order-2 mx-auto w-[210px] justify-self-center sm:w-[260px] lg:order-1 lg:w-[475px]">
           <img
             src={heroComposite}
             alt="The Fragrance Shed by a Violet"
-            className="w-[475px] h-auto block"
+            className="block h-auto w-full"
           />
         </div>
 
-        {/* Right: book info */}
-        <div className="flex flex-col gap-8 max-w-[1080px]">
-          <div className="flex flex-col gap-[18px]">
-            <h1 className="font-['Aboreto'] text-[#111] text-[40px] leading-[1.1] uppercase tracking-wide">
+        <div className="order-1 flex max-w-[1080px] flex-col items-center gap-6 text-center lg:order-2 lg:items-start lg:gap-8 lg:text-left">
+          <div className="flex flex-col gap-3 lg:gap-[18px]">
+            <h1 className="font-['Aboreto'] text-[24px] uppercase tracking-wide text-[#111] sm:text-[30px] lg:text-[40px] lg:leading-[1.1]">
               The Fragrance Shed by a Violet
             </h1>
-            <div className="flex items-center gap-2">
-              <img src={starRating} alt="4.7 stars" className="h-4" />
-              <span className="font-['Questrial'] text-[#b83431] text-[19px]">
+            <div className="flex items-center justify-center gap-2 lg:justify-start">
+              <img src={starRating} alt="4.7 stars" className="h-3.5 lg:h-4" />
+              <span className="font-['Questrial'] text-[15px] text-[#b83431] lg:text-[19px]">
                 4.7/5
               </span>
             </div>
           </div>
 
-          <div className="font-['Questrial'] text-[#595959] text-[16px] leading-[2] space-y-5 max-w-[1120px]">
+          <div className="max-w-[1120px] space-y-4 font-['Questrial'] text-[14px] leading-7 text-[#595959] sm:text-[15px] lg:space-y-5 lg:text-[16px] lg:leading-[2]">
             <p>
               After her series of articles is awarded three Pulitzer Prizes,
               investigative reporter Kate Townsend is haunted by the knowledge
@@ -55,14 +53,14 @@ export default function BookHero() {
             </p>
           </div>
 
-          <button className="bg-[#592c33] flex items-center gap-2 px-5 py-2.5 rounded-[5px] h-[42px] self-start hover:bg-opacity-90 transition">
-            <span className="font-['Questrial'] text-white text-base uppercase whitespace-nowrap">
+          <button className="flex h-[40px] items-center gap-2 self-center rounded-[5px] bg-[#592c33] px-4 py-2.5 transition hover:bg-opacity-90 lg:h-[42px] lg:self-start lg:px-5">
+            <span className="font-['Questrial'] text-[12px] uppercase whitespace-nowrap text-white lg:text-base">
               EXPLORE MORE BOOKS from the author
             </span>
             <img
               src={arrowRight}
               alt=""
-              className="w-6 h-6 rotate-90 brightness-0 invert"
+              className="h-5 w-5 rotate-90 brightness-0 invert lg:h-6 lg:w-6"
             />
           </button>
         </div>

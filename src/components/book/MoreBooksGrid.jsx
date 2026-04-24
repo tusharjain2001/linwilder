@@ -42,24 +42,23 @@ export default function MoreBooksGrid() {
   const next = () => setStartIndex((current) => Math.min(maxIndex, current + 1));
 
   return (
-    <section className="bg-[#f6efe9] relative z-10 pt-[72px]">
-      <div className="absolute left-0 top-[-66px] w-full pointer-events-none">
+    <section className="relative z-10 -mt-[22px] bg-[#f6efe9] pt-[42px] lg:mt-0 lg:pt-[72px]">
+      <div className="pointer-events-none absolute left-0 top-[-18px] w-full lg:top-[-66px]">
         <img src={zigzag} alt="" className="w-full h-auto block" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-8 pb-20 flex flex-col items-center gap-12 relative z-10">
-        {/* Header */}
-        <div className="flex flex-col items-center gap-5 text-center max-w-[686px]">
-          <h2 className="font-['Sedan_SC'] text-black text-[32px] leading-[34px]">
+      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center gap-8 px-4 pb-12 sm:px-6 lg:gap-12 lg:px-8 lg:pb-20">
+        <div className="flex max-w-[686px] flex-col items-center gap-4 text-center lg:gap-5">
+          <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.1] text-black lg:text-[32px] lg:leading-[34px]">
             VIEW MORE BOOKS
           </h2>
-          <p className="font-['Questrial'] text-[#334155] text-lg leading-6">
+          <p className="font-['Questrial'] text-[13px] leading-6 text-[#334155] sm:text-[14px] lg:text-lg">
             From award-winning author Lin Wilder comes The Reluctant Queen a powerful blend of
             history and storytelling, praised for its fast-paced and compelling narrative.
           </p>
         </div>
 
-        <div className="flex gap-3 self-end">
+        <div className="hidden gap-3 self-end lg:flex">
           <button
             onClick={prev}
             disabled={startIndex === 0}
@@ -76,7 +75,26 @@ export default function MoreBooksGrid() {
           </button>
         </div>
 
-        <div className="w-full overflow-hidden" style={{ maxWidth: `${viewportWidth}px` }}>
+        <div className="grid w-full grid-cols-2 gap-x-5 gap-y-8 lg:hidden">
+          {books.slice(0, 4).map((book, index) => (
+            <div key={`${book.title}-${index}-mobile`} className="flex flex-col gap-2 items-start">
+              <div className="relative w-full shadow-[8px_9px_10px_0px_rgba(0,0,0,0.18)]">
+                <img src={book.cover} alt={book.title} className="w-full h-auto object-cover" />
+              </div>
+              <div className="flex items-start justify-between w-full gap-2 min-h-[32px]">
+                <span className="font-['Sedan_SC'] text-[8px] leading-[1.2] text-black flex-1">
+                  {book.title}
+                </span>
+                <div className="flex-shrink-0 bg-[#b83431] flex items-center gap-1 px-1.5 py-0.5 rounded-[31px] h-[16px]">
+                  <span className="font-['Sedan_SC'] text-white text-[8px] leading-none">{book.rating}</span>
+                  <img src={starIcon} alt="star" className="w-[8px] h-[8px]" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden w-full overflow-hidden lg:block" style={{ maxWidth: `${viewportWidth}px` }}>
           <div
             className="flex gap-[60px] items-end transition-transform duration-500 ease-out will-change-transform"
             style={{ transform: `translateX(-${translateX}px)` }}
