@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
   const next = () => setActiveIndex((index) => Math.min(index + 1, maxIndex));
 
   return (
-    <section className="relative flex w-full items-center overflow-hidden pt-0 lg:mt-[-75px] lg:min-h-[668px] lg:pt-0">
+    <section className="relative mt-[-55px] flex w-full items-center overflow-hidden pt-0 lg:mt-[-75px] lg:min-h-[668px] lg:pt-0">
       <img
         src={testimonialsBg}
         alt=""
