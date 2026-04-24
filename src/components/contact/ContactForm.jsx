@@ -1,70 +1,61 @@
 export default function ContactForm() {
   return (
-    <section className="bg-[#f6efe9] py-20 px-8">
-      <div className="max-w-[1027px] mx-auto bg-white rounded-[10px] px-[74px] py-[64px]">
-        {/* Top label */}
-        <p className="font-['Questrial'] text-black text-base uppercase tracking-wide mb-3">
+    <section className="bg-[#f6efe9] px-4 py-8 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-[1027px] rounded-[10px] bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-[74px] lg:py-[64px]">
+        <p className="mb-2 font-['Questrial'] text-[10px] uppercase tracking-wide text-black sm:text-xs lg:mb-3 lg:text-base">
           Get In Touch
         </p>
 
-        {/* Heading */}
-        <h1 className="font-['Sedan_SC'] text-black text-[36px] leading-[44px] mb-4">
+        <h1 className="mb-3 font-['Sedan_SC'] text-[22px] leading-[1.2] text-black sm:text-[28px] lg:mb-4 lg:text-[36px] lg:leading-[44px]">
           Have a Question? Contact Us
         </h1>
 
-        {/* Description */}
-        <p className="font-['Questrial'] text-black text-base leading-7 max-w-[600px] mb-4">
+        <p className="mb-3 max-w-[600px] font-['Questrial'] text-[13px] leading-6 text-black sm:text-[14px] lg:mb-4 lg:text-base lg:leading-7">
           If you would like more information about any of my books please do not hesitate to contact me with the below form.
         </p>
 
-        {/* Email */}
-        <p className="font-['Questrial'] text-black text-xl leading-8 mb-8">
+        <p className="mb-6 font-['Questrial'] text-[13px] leading-6 text-black sm:text-[14px] lg:mb-8 lg:text-xl lg:leading-8">
           Email: linwilder@gmail.com
         </p>
 
-        {/* Form */}
-        <form className="flex flex-col gap-6">
-          {/* Full Name */}
-          <div className="flex flex-col gap-2">
-            <label className="font-['Questrial'] text-[#334155] text-xl leading-8">
+        <form className="flex flex-col gap-4 lg:gap-6">
+          <div className="flex flex-col gap-1.5 lg:gap-2">
+            <label className="font-['Questrial'] text-[13px] leading-6 text-[#334155] lg:text-xl lg:leading-8">
               Full Name
             </label>
             <input
               type="text"
               placeholder="Jane Doe"
-              className="w-full h-[65px] border border-[#cacaca] rounded-[10px] px-5 font-['Questrial'] text-[#595959] text-base outline-none focus:border-[#592c33] transition-colors"
+              className="h-[34px] w-full rounded-[4px] border border-[#cacaca] px-3 font-['Questrial'] text-[11px] text-[#595959] outline-none transition-colors focus:border-[#592c33] lg:h-[65px] lg:rounded-[10px] lg:px-5 lg:text-base"
             />
           </div>
 
-          {/* Email */}
-          <div className="flex flex-col gap-2">
-            <label className="font-['Questrial'] text-[#334155] text-xl leading-8">
+          <div className="flex flex-col gap-1.5 lg:gap-2">
+            <label className="font-['Questrial'] text-[13px] leading-6 text-[#334155] lg:text-xl lg:leading-8">
               Email
             </label>
             <input
               type="email"
               placeholder="JaneDoe@gmail.com"
-              className="w-full h-[65px] border border-[#cacaca] rounded-[10px] px-5 font-['Questrial'] text-[#595959] text-base outline-none focus:border-[#592c33] transition-colors"
+              className="h-[34px] w-full rounded-[4px] border border-[#cacaca] px-3 font-['Questrial'] text-[11px] text-[#595959] outline-none transition-colors focus:border-[#592c33] lg:h-[65px] lg:rounded-[10px] lg:px-5 lg:text-base"
             />
           </div>
 
-          {/* Message */}
-          <div className="flex flex-col gap-2">
-            <label className="font-['Questrial'] text-[#334155] text-xl leading-8">
+          <div className="flex flex-col gap-1.5 lg:gap-2">
+            <label className="font-['Questrial'] text-[13px] leading-6 text-[#334155] lg:text-xl lg:leading-8">
               Message
             </label>
             <textarea
               placeholder="hi"
               rows={5}
-              className="w-full h-[138px] border border-[#cacaca] rounded-[10px] px-5 py-4 font-['Questrial'] text-[#595959] text-base outline-none focus:border-[#592c33] transition-colors resize-none"
+              className="h-[58px] w-full resize-none rounded-[4px] border border-[#cacaca] px-3 py-2 font-['Questrial'] text-[11px] text-[#595959] outline-none transition-colors focus:border-[#592c33] lg:h-[138px] lg:rounded-[10px] lg:px-5 lg:py-4 lg:text-base"
             />
           </div>
 
-          {/* Submit */}
-          <div>
+          <div className="flex justify-center lg:block">
             <button
               type="submit"
-              className="w-[148px] h-[45px] bg-[#592c33] rounded-[5px] font-['Questrial'] text-[#edeae3] text-base uppercase tracking-wide hover:bg-[#6e3640] transition-colors"
+              className="h-[26px] w-[82px] rounded-[2px] bg-[#592c33] font-['Questrial'] text-[11px] uppercase tracking-wide text-[#edeae3] transition-colors hover:bg-[#6e3640] lg:h-[45px] lg:w-[148px] lg:rounded-[5px] lg:text-base"
             >
               SEND
             </button>
