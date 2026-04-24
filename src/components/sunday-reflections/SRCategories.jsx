@@ -1,50 +1,30 @@
-function chunkCategories(categories, size) {
-  const rows = [];
-
-  for (let index = 0; index < categories.length; index += size) {
-    rows.push(categories.slice(index, index + size));
-  }
-
-  return rows;
-}
-
 export default function SRCategories({ categories, activeCategory, onSelectCategory }) {
-  const categoryRows = chunkCategories(categories, 6);
-
   return (
-    <section className="bg-[#f6efe9] py-12 px-8">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-5">
-        <h2 className="font-['Sedan_SC'] text-black text-[48px] leading-[56px] text-center mb-2">
-          categories
-        </h2>
+    <section className="bg-[#f6efe9] px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="h-px w-full bg-[#592c33] opacity-20" />
 
-        {categoryRows.map((row, rowIdx) => (
-          <div key={rowIdx}>
-            <div className="w-full h-px bg-[#592c33] opacity-20 mb-5" />
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 px-2 py-6 text-center font-['Questrial'] text-[15px] sm:gap-x-8 sm:text-[18px] lg:gap-x-10 lg:gap-y-5 lg:px-6 lg:py-8 lg:text-[23.5px]">
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
 
-            <div className="flex flex-wrap gap-x-[50px] gap-y-3 items-center justify-center font-['Questrial'] text-[23.5px] text-center">
-              {row.map((category) => {
-                const isActive = activeCategory === category;
+            return (
+              <button
+                key={category}
+                onClick={() => onSelectCategory(category)}
+                className={`leading-[1.2] transition-colors ${
+                  isActive
+                    ? 'text-[#592c33] underline underline-offset-2'
+                    : 'text-[#595959] hover:text-[#592c33]'
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
+        </div>
 
-                return (
-                  <button
-                    key={category}
-                    onClick={() => onSelectCategory(category)}
-                    className={`leading-[34px] transition-colors ${
-                      isActive
-                        ? 'text-[#592c33] underline underline-offset-2'
-                        : 'text-[#595959] hover:text-[#592c33]'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-
-        <div className="w-full h-px bg-[#592c33] opacity-20 mt-2" />
+        <div className="h-px w-full bg-[#592c33] opacity-20" />
       </div>
     </section>
   );
