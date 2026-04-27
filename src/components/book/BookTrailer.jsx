@@ -3,7 +3,7 @@ import trailerThumb from '../../assets/images/book/trailer-thumb.png';
 
 export default function BookTrailer() {
   return (
-    <section className="bg-[#efd3b1] px-4 py-10 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
+    <section className="bg-[#efd3b1] px-4 py-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
       <div className="mx-auto flex max-w-[1297px] flex-col items-center gap-4 lg:gap-6">
         <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.2] text-[#111] text-center lg:text-[40px] lg:leading-[62px]">
           Book Trailer

@@ -47,7 +47,7 @@ export default function MoreBooksGrid() {
         <img src={zigzag} alt="" className="w-full h-auto block" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center gap-8 px-4 pb-12 sm:px-6 lg:gap-12 lg:px-8 lg:pb-20">
+      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center gap-8 px-3 pb-12 sm:px-6 lg:gap-12 lg:px-8 lg:pb-20">
         <div className="flex max-w-[686px] flex-col items-center gap-4 text-center lg:gap-5">
           <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.1] text-black lg:text-[32px] lg:leading-[34px]">
             VIEW MORE BOOKS
@@ -75,19 +75,19 @@ export default function MoreBooksGrid() {
           </button>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-x-5 gap-y-8 lg:hidden">
+        <div className="mx-auto grid w-fit grid-cols-2 gap-x-12 gap-y-8 lg:hidden">
           {books.slice(0, 4).map((book, index) => (
-            <div key={`${book.title}-${index}-mobile`} className="flex flex-col gap-2 items-start">
-              <div className="relative w-full shadow-[8px_9px_10px_0px_rgba(0,0,0,0.18)]">
-                <img src={book.cover} alt={book.title} className="w-full h-auto object-cover" />
+            <div key={`${book.title}-${index}-mobile`} className="flex w-[126px] flex-col items-start gap-1.5">
+              <div className="relative w-full overflow-hidden shadow-[3px_4px_8px_0px_rgba(0,0,0,0.14)]">
+                <img src={book.cover} alt={book.title} className="block w-full h-auto object-cover" />
               </div>
-              <div className="flex items-start justify-between w-full gap-2 min-h-[32px]">
-                <span className="font-['Sedan_SC'] text-[8px] leading-[1.2] text-black flex-1">
+              <div className="flex w-full items-end justify-between gap-1 min-h-[22px]">
+                <span className="flex-1 pr-1 font-['Sedan_SC'] text-[7px] leading-[1.2] text-black">
                   {book.title}
                 </span>
-                <div className="flex-shrink-0 bg-[#b83431] flex items-center gap-1 px-1.5 py-0.5 rounded-[31px] h-[16px]">
-                  <span className="font-['Sedan_SC'] text-white text-[8px] leading-none">{book.rating}</span>
-                  <img src={starIcon} alt="star" className="w-[8px] h-[8px]" />
+                <div className="flex h-[12px] flex-shrink-0 items-center gap-0.5 rounded-[31px] bg-[#b83431] px-1.5">
+                  <span className="font-['Sedan_SC'] text-[6px] leading-none text-white">{book.rating}</span>
+                  <img src={starIcon} alt="star" className="h-[5px] w-[5px]" />
                 </div>
               </div>
             </div>

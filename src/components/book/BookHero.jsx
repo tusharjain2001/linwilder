@@ -6,7 +6,7 @@ export default function BookHero() {
   return (
     <section className="relative flex items-center overflow-hidden bg-[#e4e8d7] pb-16">
       <div className="grid w-full items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[430px_minmax(0,1fr)] lg:gap-20 lg:px-20 lg:py-20">
-        <div className="relative order-2 mx-auto w-[210px] justify-self-center sm:w-[260px] lg:order-1 lg:w-[400px]">
+        <div className="relative hidden mx-auto w-[210px] justify-self-center sm:w-[260px] lg:order-1 lg:block lg:w-[400px]">
           <img
             src={heroComposite}
             alt="The Fragrance Shed by a Violet"
@@ -25,6 +25,14 @@ export default function BookHero() {
                 4.7/5
               </span>
             </div>
+          </div>
+
+          <div className="relative mx-auto w-[210px] sm:w-[260px] lg:hidden">
+            <img
+              src={heroComposite}
+              alt="The Fragrance Shed by a Violet"
+              className="block h-auto w-full"
+            />
           </div>
 
           <div className="max-w-[1120px] space-y-4 font-['Questrial'] text-[14px] leading-7 text-[#595959] sm:text-[15px] lg:space-y-5 lg:text-[16px] lg:leading-[2]">
@@ -53,7 +61,7 @@ export default function BookHero() {
             </p>
           </div>
 
-          <button className="flex h-[40px] items-center gap-2 self-center rounded-[5px] bg-[#592c33] px-4 py-2.5 transition hover:bg-opacity-90 lg:h-[42px] lg:self-start lg:px-5">
+          <button className="hidden h-[40px] items-center gap-2 self-center rounded-[5px] bg-[#592c33] px-4 py-2.5 transition hover:bg-opacity-90 lg:flex lg:h-[42px] lg:self-start lg:px-5">
             <span className="font-['Questrial'] text-[12px] uppercase whitespace-nowrap text-white lg:text-base">
               EXPLORE MORE BOOKS from the author
             </span>
