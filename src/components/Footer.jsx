@@ -115,13 +115,13 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="mt-8 h-px w-[360px] bg-white opacity-20" />
+          <div className="mt-8 h-px w-full max-w-[360px] bg-white opacity-20" />
 
-          <div className="mt-3 flex w-full justify-between gap-4 text-left">
-            <span className="font-['Inter'] text-[10px] leading-4 text-white">
+          <div className="mt-3 flex w-full max-w-[360px] justify-between gap-4 text-left">
+            <span className="font-['Inter'] text-[14px] leading-5 text-white">
               Book Author: LIN WILDER
             </span>
-            <span className="font-['Inter'] text-[10px] leading-4 text-white text-right">
+            <span className="max-w-[160px] font-['Inter'] text-[14px] leading-5 text-center text-white">
               Copyright © 2023. All rights reserved
             </span>
           </div>
