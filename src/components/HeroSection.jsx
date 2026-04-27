@@ -33,7 +33,9 @@ export default function HeroSection() {
               className="h-114.5 w-full object-cover object-center"
             />
             <p className="absolute inset-0 hidden items-center justify-center px-10 text-center font-['Questrial'] text-[32px] leading-8.5 text-[#9d674d] capitalize lg:flex">
-              faith, healing, medicine, and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; personal transformation
+              faith, healing, medicine,
+              and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              personal transformation
             </p>
           </div>
         </div>
@@ -51,12 +53,12 @@ export default function HeroSection() {
                   <img
                     src={award2}
                     alt="Award 2"
-                    className="-ml-2 h-35.75 w-35.75 object-contain"
+                    className=" h-35.75 w-35.75 object-contain"
                   />
                   <img
                     src={award3}
                     alt="Award 3"
-                    className="-ml-2 h-37.25 w-39 object-contain"
+                    className=" h-37.25 w-39 object-contain"
                   />
                 </div>
                 <p className="max-w-[360px] font-['Sedan_SC'] text-[24px] leading-7.5 text-[#f6efe9] lg:max-w-none">
@@ -72,18 +74,22 @@ export default function HeroSection() {
                     Plausible Liars.
                   </h2>
                   <p className="mx-auto mt-4 max-w-[360px] text-[17px] leading-7 font-['Questrial'] sm:max-w-[460px] sm:text-[19px] lg:mx-0 lg:mt-0 lg:max-w-none lg:text-[20px] lg:leading-8">
-                    In Lin Wilder&apos;s fifth Lindsey McCall mystery, journalist
-                    Kate Townsend&apos;s controversial series on gender politics and
-                    children leads to a legal battle, drawing Dr. Lindsey McCall
-                    into a conspiracy involving transgender issues and medical
-                    ethics.
+                    In Lin Wilder&apos;s fifth Lindsey McCall mystery,
+                    journalist Kate Townsend&apos;s controversial series on
+                    gender politics and children leads to a legal battle,
+                    drawing Dr. Lindsey McCall into a conspiracy involving
+                    transgender issues and medical ethics.
                   </p>
                 </div>
                 <button className="flex h-auto w-fit items-center gap-2.5 rounded-[5px] bg-white px-4 py-2.5 transition-colors hover:bg-opacity-90 lg:px-5">
                   <span className="font-['Questrial'] text-[12px] font-bold uppercase leading-none text-[#592c33] sm:text-[14px] lg:text-[16px]">
                     Explore More Books
                   </span>
-                  <img src={arrowRight} alt="" className="hidden h-6 w-6 rotate-90 lg:block" />
+                  <img
+                    src={arrowRight}
+                    alt=""
+                    className="hidden h-6 w-6 rotate-90 lg:block"
+                  />
                 </button>
               </div>
             </div>

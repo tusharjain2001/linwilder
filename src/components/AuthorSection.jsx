@@ -1,4 +1,4 @@
-import authorPhoto from '../assets/images/author-photo.svg';
+import authorPhoto from '../assets/images/author-photo.png';
 import authorSignature from '../assets/images/author-signature.png';
 import arrowRight from '../assets/images/arrow-right-dark.svg';
 

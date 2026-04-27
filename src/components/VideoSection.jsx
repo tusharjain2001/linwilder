@@ -5,7 +5,7 @@ import arrowRight from '../assets/images/arrow-right-dark.svg';
 export default function VideoSection() {
   return (
     <section className="bg-[#e4e8d7] px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-28">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-8 lg:flex-row-reverse lg:items-center lg:gap-28">
         <div className="flex max-w-[339px] flex-col items-center gap-4 text-center lg:max-w-none lg:flex-1 lg:items-start lg:text-left">
           <h3 className="font-['Aboreto'] text-[20px] leading-[29px] text-black lg:text-[32px] lg:leading-[43px]">
             Foreman of the Jury in Plausible Liars
