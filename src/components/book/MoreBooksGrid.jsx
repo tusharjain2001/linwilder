@@ -42,7 +42,7 @@ export default function MoreBooksGrid() {
   const next = () => setStartIndex((current) => Math.min(maxIndex, current + 1));
 
   return (
-    <section className="relative z-10 -mt-[22px] bg-[#f6efe9] pt-[42px] lg:mt-0 lg:pt-[72px]">
+    <section className="relative z-10 -mt-[22px] bg-[#f6efe9] pt-[42px] lg:mt-[-40px] lg:pt-[72px]">
       <div className="pointer-events-none absolute left-0 top-[-18px] w-full lg:top-[-66px]">
         <img src={zigzag} alt="" className="w-full h-auto block" />
       </div>

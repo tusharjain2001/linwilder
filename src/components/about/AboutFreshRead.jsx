@@ -2,7 +2,7 @@ import freshReadImage from '../../assets/images/about/fresh-read-image.png';
 
 export default function AboutFreshRead() {
   return (
-    <section className="bg-[#efd3b1] px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section className="bg-[#efd3b1] px-4 py-10 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
       <div className="mx-auto flex max-w-[1283px] flex-col gap-6 lg:gap-10">
         <div className="h-[190px] w-full overflow-hidden rounded-[10px] sm:h-[260px] lg:h-[458px]">
           <img
