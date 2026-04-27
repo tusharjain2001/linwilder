@@ -4,8 +4,8 @@ export default function AboutBio() {
   return (
     <section className="bg-[#f6efe9] px-8 py-20">
       <div className="max-w-[1169px] mx-auto flex flex-col items-center gap-5 text-center">
-        <h1 className="font-['Sedan_SC'] text-[#592c33] text-[56px] leading-[72px]">
-          About Linwilder
+        <h1 className="font-['Sedan_SC'] text-[#592c33] text-[56px] leading-[72px] uppercase">
+          ABOUT LINWILDER
         </h1>
 
         <p className="font-['Questrial'] text-[#595959] text-lg leading-[34px]">
