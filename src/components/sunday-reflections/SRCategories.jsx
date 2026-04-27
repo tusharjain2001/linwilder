@@ -1,11 +1,23 @@
-export default function SRCategories({ categories, activeCategory, onSelectCategory }) {
-  return (
-    <section className="bg-[#f6efe9] px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1600px]">
-        <div className="h-px w-full bg-[#592c33] opacity-20" />
+function splitIntoRows(categories, itemsPerRow) {
+  const rows = [];
 
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 px-2 py-6 text-center font-['Questrial'] text-[15px] sm:gap-x-8 sm:text-[18px] lg:gap-x-10 lg:gap-y-5 lg:px-6 lg:py-8 lg:text-[23.5px]">
-          {categories.map((category) => {
+  for (let index = 0; index < categories.length; index += itemsPerRow) {
+    rows.push(categories.slice(index, index + itemsPerRow));
+  }
+
+  return rows;
+}
+
+export default function SRCategories({ categories, activeCategory, onSelectCategory }) {
+  const mobileRows = splitIntoRows(categories, 3);
+  const tabletRows = splitIntoRows(categories, 5);
+  const desktopRows = splitIntoRows(categories, 8);
+
+  const renderRows = (rows) =>
+    rows.map((row, rowIndex) => (
+      <div key={`row-${rowIndex}`} className="border-t border-[#592c33]/20">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 px-3 py-4 text-center font-['Questrial'] text-[14px] sm:gap-x-8 sm:text-[16px] lg:gap-x-10 lg:px-6 lg:text-[18px]">
+          {row.map((category) => {
             const isActive = activeCategory === category;
 
             return (
@@ -23,8 +35,21 @@ export default function SRCategories({ categories, activeCategory, onSelectCateg
             );
           })}
         </div>
+      </div>
+    ));
 
-        <div className="h-px w-full bg-[#592c33] opacity-20" />
+  return (
+    <section className="bg-[#f6efe9] px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1500px]">
+        <h2 className="text-center font-['Sedan_SC'] text-[22px] leading-none text-black sm:text-[28px] lg:text-[32px]">
+          CATEGORIES
+        </h2>
+
+        <div className="mt-6 border-b border-[#592c33]/20">
+          <div className="sm:hidden">{renderRows(mobileRows)}</div>
+          <div className="hidden sm:block lg:hidden">{renderRows(tabletRows)}</div>
+          <div className="hidden lg:block">{renderRows(desktopRows)}</div>
+        </div>
       </div>
     </section>
   );
