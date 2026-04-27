@@ -40,8 +40,14 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto flex max-w-[1440px] flex-col px-4 pb-12 pt-26 sm:px-6 sm:pt-30 lg:-mt-16.75 lg:px-37 lg:pb-16 lg:pt-0">
+        <div className="relative mx-auto flex max-w-[1440px] flex-col px-4 pb-12 pt-16 sm:px-6 sm:pt-30 lg:-mt-16.75 lg:px-37 lg:pb-16 lg:pt-0">
           <div className="flex flex-col items-center gap-8 pt-5 text-center lg:flex-row lg:items-start lg:gap-14.75 lg:pt-0 lg:text-left">
+            <p className="max-w-[320px] font-['Sedan_SC'] text-[24px] leading-7.5 text-[#f6efe9] lg:hidden">
+              An Award-winning
+              <br />
+              Dr. Lindsey McCall medical mystery series.
+            </p>
+
             <div className="order-2 flex max-w-[610px] flex-col items-center gap-8 lg:order-1 lg:flex-1 lg:items-start lg:gap-14">
               <div className="hidden flex-col items-center gap-4 lg:flex lg:items-start lg:gap-3.25">
                 <div className="flex items-end justify-center gap-0 sm:gap-1 lg:justify-start lg:gap-5">
