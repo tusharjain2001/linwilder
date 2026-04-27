@@ -1,5 +1,4 @@
 import aboutBg from '../assets/images/about-bg.svg';
-import authorPhoto from '../assets/images/author-photo.png';
 import mobileAboutAuthor from '../assets/images/mobile-about-author.png';
 
 export default function AboutLinwilder() {
@@ -24,17 +23,28 @@ export default function AboutLinwilder() {
       </section>
 
       <section className="lg:hidden">
-        <div className="flex flex-col items-center text-center bg-[#f6efe9] px-5 pt-10 pb-6">
-          <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.15] text-black">
-            ABOUT LINWILDER
-          </h2>
-          <p className="mt-4 font-['Questrial'] text-[16px] leading-7 text-[#334155] max-w-[340px]">
-            An award-winning author with a distinguished portfolio of 10+ published works,
-            celebrated for crafting compelling narratives that resonate across audiences.
-          </p>
+        <div className="bg-[#f6efe9] px-5 pt-10 pb-8">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.15] text-black">
+              ABOUT LINWILDER
+            </h2>
+            <p className="mt-4 font-['Questrial'] text-[16px] leading-7 text-[#334155] max-w-[340px]">
+              An award-winning author with a distinguished portfolio of 10+ published works,
+              celebrated for crafting compelling narratives that resonate across audiences.
+            </p>
+          </div>
         </div>
 
-        <div className="w-full bg-[#efd3b1] px-[14px] pb-[14px]">
+        <div className="relative z-20 -mb-3 h-[34px] w-full overflow-hidden">
+          <img
+            src={aboutBg}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 left-0 h-[88px] w-full object-cover object-bottom"
+          />
+        </div>
+
+        <div className="relative -mt-3 w-full bg-[#efd3b1] px-[14px] pb-[14px] pt-0">
           <img
             src={mobileAboutAuthor}
             alt="Lin Wilder"
