@@ -1,5 +1,6 @@
 import aboutBg from '../assets/images/about-bg.svg';
 import authorPhoto from '../assets/images/author-photo.png';
+import mobileAboutAuthor from '../assets/images/mobile-about-author.png';
 
 export default function AboutLinwilder() {
   return (
@@ -33,17 +34,11 @@ export default function AboutLinwilder() {
           </p>
         </div>
 
-        <div className="relative w-full overflow-hidden">
+        <div className="w-full bg-[#efd3b1] px-[14px] pb-[14px]">
           <img
-            src={aboutBg}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <img
-            src={authorPhoto}
+            src={mobileAboutAuthor}
             alt="Lin Wilder"
-            className="relative z-10 h-auto w-full object-cover"
+            className="mx-auto block h-auto w-full max-w-[390px]"
           />
         </div>
       </section>
