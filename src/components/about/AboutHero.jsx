@@ -1,8 +1,8 @@
-import heroLandscape from '../../assets/images/about/hero-landscape.png';
+import heroLandscape from '../../assets/images/hero-landscape.png';
 
 export default function AboutHero() {
   return (
-    <section className="w-full h-[514px] overflow-hidden">
+    <section className="w-full overflow-hidden">
       <img
         src={heroLandscape}
         alt="Lin Wilder landscape"

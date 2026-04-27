@@ -6,7 +6,7 @@ export default function BookHero() {
   return (
     <section className="relative flex items-center overflow-hidden bg-[#e4e8d7]">
       <div className="grid w-full items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[430px_minmax(0,1fr)] lg:gap-20 lg:px-20 lg:py-20">
-        <div className="relative order-2 mx-auto w-[210px] justify-self-center sm:w-[260px] lg:order-1 lg:w-[475px]">
+        <div className="relative order-2 mx-auto w-[210px] justify-self-center sm:w-[260px] lg:order-1 lg:w-[400px]">
           <img
             src={heroComposite}
             alt="The Fragrance Shed by a Violet"
