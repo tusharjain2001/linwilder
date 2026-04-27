@@ -203,17 +203,16 @@ export default function Footer() {
 
           <div className="h-px w-full bg-white opacity-20" />
 
-          <div className="-mt-16 flex items-center justify-between">
-            <div className="flex items-center gap-52">
-              <span className="font-['Inter'] text-base leading-4 text-white">
-                Book Author: LIN WILDER
-              </span>
-              <span className="font-['Inter'] text-center text-base leading-4 text-white">
-                Copyright © 2023. All rights reserved
-              </span>
-            </div>
+          <div className="-mt-16 grid grid-cols-[1fr_auto_1fr] items-center gap-6">
+            <span className="font-['Inter'] text-base leading-4 text-white">
+              Book Author: LIN WILDER
+            </span>
 
-            <div className="flex items-center gap-5">
+            <span className="font-['Inter'] text-center text-base leading-4 text-white">
+              Copyright © 2023. All rights reserved
+            </span>
+
+            <div className="flex items-center justify-end gap-5">
               {socialLinks.map(({ href, icon, alt }) => (
                 <a
                   key={alt}
