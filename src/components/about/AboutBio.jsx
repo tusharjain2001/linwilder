@@ -2,13 +2,13 @@ import signatureBlack from '../../assets/images/about/signature-black.png';
 
 export default function AboutBio() {
   return (
-    <section className="bg-[#f6efe9] px-8 py-20">
-      <div className="max-w-[1169px] mx-auto flex flex-col items-center gap-5 text-center">
-        <h1 className="font-['Sedan_SC'] text-[#592c33] text-[56px] leading-[72px] uppercase">
+    <section className="bg-[#f6efe9] px-8 py-4 md:py-20">
+      <div className="max-w-[1169px] mx-auto flex flex-col items-center md:gap-5 text-center">
+        <h1 className="font-['Sedan_SC'] text-[#592c33] text-[20px] md:text-[56px] leading-[72px] uppercase">
           ABOUT LINWILDER
         </h1>
 
-        <p className="font-['Questrial'] text-[#595959] text-lg leading-[34px]">
+        <p className="font-['Questrial'] text-[#595959] text-sm md:text-lg leading-[34px]">
           Lin Wilder holds a doctorate in Public Health from the University of Texas at Houston and
           has over thirty years in academic health care administration. After serving as Hospital
           Director at UMASS Medical Center, she began writing fiction and has since won numerous
