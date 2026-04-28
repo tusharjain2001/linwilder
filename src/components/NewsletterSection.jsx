@@ -12,7 +12,7 @@ export default function NewsletterSection() {
   return (
     <section className="bg-[#e4e8d7] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 text-center lg:grid lg:max-w-[1260px] lg:grid-cols-[460px_560px] lg:items-center lg:justify-center lg:gap-x-16 lg:px-0 lg:text-left">
-        <h2 className="max-w-[314px] font-['Sedan_SC'] text-[16px] uppercase leading-[17px] text-[#592c33] lg:max-w-[460px] lg:text-[17px] lg:leading-[1.25]">
+        <h2 className="max-w-[314px] font-['Sedan_SC'] text-[16px] uppercase leading-[17px] text-[#592c33] lg:max-w-[460px] lg:text-[32px] lg:leading-[1.25]">
           Sign Up for The Sunday Reflections on Writing, Tour, and More
         </h2>
 

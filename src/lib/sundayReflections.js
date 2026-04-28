@@ -1,6 +1,31 @@
 const WORDPRESS_SITE_URL = import.meta.env.VITE_WORDPRESS_SITE_URL || 'https://linwilder.com';
 const WORDPRESS_CATEGORY = import.meta.env.VITE_WORDPRESS_CATEGORY || '';
 
+const ALLOWED_CATEGORIES = [
+  'atheism',
+  'Christianity',
+  'doberman',
+  'Dogs',
+  'fear',
+  'Happiness',
+  'Books',
+  'historical fiction',
+  'I, Claudia',
+  'medical mystery',
+  'Movies',
+  'music',
+  'My Name is Saul',
+  'peace',
+  'thanksgiving',
+  'Work',
+  'Writing',
+  'public speaking',
+  'Prayer',
+  'politics',
+];
+
+const ALLOWED_CATEGORIES_LOWER = new Set(ALLOWED_CATEGORIES.map((n) => n.toLowerCase()));
+
 const categoriesPromiseCache = new Map();
 const categoryIdPromiseCache = new Map();
 const postsPagePromiseCache = new Map();
@@ -151,9 +176,15 @@ export async function loadSundayReflectionCategories() {
       'Failed to load WordPress categories. If this app is hosted on a different domain, WordPress CORS may need to be enabled.',
     ).then((categories) => {
       const names = categories
-        .filter((category) => category.count > 0)
         .map((category) => category.name)
-        .filter(Boolean);
+        .filter(Boolean)
+        .filter((name) => ALLOWED_CATEGORIES_LOWER.has(name.toLowerCase()))
+        .sort((a, b) => {
+          const ia = ALLOWED_CATEGORIES.findIndex((c) => c.toLowerCase() === a.toLowerCase());
+          const ib = ALLOWED_CATEGORIES.findIndex((c) => c.toLowerCase() === b.toLowerCase());
+          return ia - ib;
+        })
+        .map((name) => name.replace(/\b\w/g, (c) => c.toUpperCase()));
 
       if (WORDPRESS_CATEGORY) {
         return ['All', WORDPRESS_CATEGORY];
