@@ -99,7 +99,7 @@ export default function Navbar() {
               <Link
                 key={label}
                 to={path}
-                className={`font-['Questrial'] text-[#592c33] text-2xl uppercase whitespace-nowrap border-b pb-1 hover:opacity-70 transition-opacity ${
+                className={`font-['Questrial'] text-[#592c33] text-xl uppercase whitespace-nowrap border-b pb-1 hover:opacity-70 transition-opacity ${
                   isActive ? 'border-[#592c33]' : 'border-transparent'
                 }`}
               >

@@ -12,7 +12,7 @@ export default function HeroSection() {
   return (
     <>
       <section className="bg-[#592c33] w-full relative z-10">
-        <div className="relative px-4 pt-6 sm:px-6 lg:px-20 lg:pt-20">
+        <div className="relative mx-auto max-w-360 px-4 pt-6 sm:px-6 lg:px-20 lg:pt-20">
           <div className="relative lg:hidden">
             <img
               src={mobileHero}
@@ -50,21 +50,23 @@ export default function HeroSection() {
 
             <div className="order-2 flex max-w-[610px] flex-col items-center gap-8 lg:order-1 lg:flex-1 lg:items-start lg:gap-14">
               <div className="hidden flex-col items-center gap-4 lg:flex lg:items-start lg:gap-3.25">
-                <div className="flex items-end justify-center gap-0 sm:gap-1 lg:justify-start lg:gap-5">
+                <div className="flex items-end">
                   <img
                     src={award1}
                     alt="Award 1"
-                    className="h-35.75 w-35.75 object-contain"
+                    className="h-35.75 w-35.75 shrink-0 object-contain"
                   />
+                  <div className="w-5 shrink-0" />
                   <img
                     src={award2}
                     alt="Award 2"
-                    className=" h-35.75 w-35.75 object-contain"
+                    className="h-35.75 w-35.75 shrink-0 object-contain"
                   />
+                  <div className="w-3.5 shrink-0" />
                   <img
                     src={award3}
                     alt="Award 3"
-                    className=" h-37.25 w-39 object-contain"
+                    className="h-35.75 w-35.75 shrink-0 object-contain"
                   />
                 </div>
                 <p className="max-w-[360px] font-['Sedan_SC'] text-[24px] leading-7.5 text-[#f6efe9] lg:max-w-none">

@@ -17,7 +17,7 @@ export default function BookHero() {
         <div className="order-1 flex max-w-[1080px] flex-col items-center gap-6 text-center lg:order-2 lg:items-start lg:gap-8 lg:text-left">
           <div className="flex flex-col gap-3 lg:gap-[18px]">
             <h1 className="font-['Aboreto'] text-[24px] uppercase tracking-wide text-[#111] sm:text-[30px] lg:text-[40px] lg:leading-[1.1]">
-              The Fragrance Shed by a Violet
+              The Fragrance<br />Shed by a Violet
             </h1>
             <div className="flex items-center justify-center gap-2 lg:justify-start">
               <img src={starRating} alt="4.7 stars" className="h-3.5 lg:h-4" />

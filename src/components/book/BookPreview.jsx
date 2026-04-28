@@ -36,7 +36,7 @@ export default function BookPreview() {
             />
           </button>
 
-          <div className="flex-shrink-0 overflow-hidden rounded shadow-lg">
+          <div className="flex-shrink-0 overflow-hidden rounded">
             <img
               src={previewPages}
               alt={`Book preview page ${currentPage}`}
