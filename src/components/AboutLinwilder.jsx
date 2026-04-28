@@ -45,10 +45,22 @@ export default function AboutLinwilder() {
         </div>
 
         <div className="relative -mt-3 w-full bg-[#efd3b1] px-[14px] pb-[14px] pt-0">
+          {/* <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-[14px] top-0 z-10 h-24 bg-gradient-to-b from-[#f6efe9] via-[#f6efe9]/70 to-transparent"
+          /> */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[14px] left-[14px] top-0 z-10 w-8 bg-gradient-to-r from-[#efd3b1] via-[#efd3b1]/60 to-transparent"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[14px] right-[14px] top-0 z-10 w-8 bg-gradient-to-l from-[#efd3b1] via-[#efd3b1]/60 to-transparent"
+          />
           <img
             src={mobileAboutAuthor}
             alt="Lin Wilder"
-            className="mx-auto block h-auto w-full max-w-[390px]"
+            className="relative mx-auto block h-auto w-full max-w-[390px]"
           />
         </div>
       </section>
