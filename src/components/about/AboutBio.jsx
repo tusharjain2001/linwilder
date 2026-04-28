@@ -8,7 +8,7 @@ export default function AboutBio() {
           ABOUT LINWILDER
         </h1>
 
-        <p className="font-['Questrial'] text-[#595959] text-sm md:text-lg leading-[34px]">
+        <p className="font-['Questrial'] text-[#595959] mt-[-10px] text-sm md:text-lg leading-[34px]">
           Lin Wilder holds a doctorate in Public Health from the University of Texas at Houston and
           has over thirty years in academic health care administration. After serving as Hospital
           Director at UMASS Medical Center, she began writing fiction and has since won numerous
