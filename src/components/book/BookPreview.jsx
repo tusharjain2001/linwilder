@@ -12,13 +12,13 @@ export default function BookPreview() {
   const next = () => setCurrentPage((p) => Math.min(TOTAL_PAGES, p + 1));
 
   return (
-    <section className="bg-[#592c33] px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section className="bg-[#592c33] px-4 py-6 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto flex max-w-[1300px] flex-col items-center gap-6 lg:gap-8">
         <div className="flex max-w-[686px] flex-col items-center gap-3 text-center lg:gap-5">
           <h2 className="font-['Sedan_SC'] text-[24px] leading-[1.1] text-white lg:text-[32px] lg:leading-[34px]">
             BOOK PREVIEW
           </h2>
-          <p className="font-['Questrial'] text-[12px] leading-5 text-[#f6efe9] lg:text-lg lg:leading-6">
+          <p className="font-['Questrial'] text-[12px] px-18 leading-5 text-[#f6efe9] lg:text-lg lg:leading-6">
             Explore a few snippets from the book to know if the books suits you!
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function BookPreview() {
           <span className="text-[14px] leading-6 text-[#efd3b1] lg:text-2xl">
             {String(currentPage).padStart(2, '0')}/{TOTAL_PAGES}
           </span>
-          <span className="mt-1 text-[9px] leading-4 text-[#f6efe9] lg:text-base lg:leading-6">Pages Completed</span>
+          <span className="mt-[-5px] md:mt-1 text-[14px] leading-4 text-[#f6efe9] lg:text-base lg:leading-6">Pages Completed</span>
         </div>
       </div>
     </section>
