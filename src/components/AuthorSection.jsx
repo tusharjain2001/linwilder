@@ -62,7 +62,7 @@ export default function AuthorSection() {
           A Fiction Novelist based in Texas
         </p>
 
-        <p className="mt-8 font-['Questrial'] text-[16px] leading-8 text-[#595959]">
+        <p className="mt-2 md:mt-8 font-['Questrial'] text-[16px] leading-8 text-[#595959]">
           Lin Wilder has a doctorate in Public Health from the UT Houston with a background in
           cardiopulmonary physiology, medical ethics, and hospital administration. During her
           thirty-plus years in academic health care administration, Lin authored numerous texts in
