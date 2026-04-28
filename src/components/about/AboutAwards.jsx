@@ -6,7 +6,7 @@ import thirdAward from '../../assets/mobile/third.png';
 
 export default function AboutAwards() {
   return (
-    <section className="bg-[#592c33] px-2 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="bg-[#592c33] px-2 py-8 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto flex max-w-[686px] flex-col items-center gap-10 lg:gap-10">
         <div className="flex flex-col items-center gap-2 text-center">
           <p className="font-['Questrial'] text-[13px] uppercase tracking-wide text-white lg:text-xl lg:leading-[26px]">
