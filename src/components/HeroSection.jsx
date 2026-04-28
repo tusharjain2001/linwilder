@@ -42,10 +42,14 @@ export default function HeroSection() {
 
         <div className="relative mx-auto flex max-w-[1440px] flex-col px-4 pb-12 pt-16 sm:px-6 sm:pt-30 lg:-mt-16.75 lg:px-37 lg:pb-16 lg:pt-0">
           <div className="flex flex-col items-center gap-8 pt-5 text-center lg:flex-row lg:items-start lg:gap-14.75 lg:pt-0 lg:text-left">
-            <p className="max-w-[320px] font-['Sedan_SC'] text-[24px] leading-7.5 text-[#f6efe9] lg:hidden">
+            <p className="max-w-[360px] font-['Sedan_SC'] text-[22px] leading-[1.35] text-[#f6efe9] lg:hidden">
               An Award-winning
               <br />
-              Dr. Lindsey McCall medical mystery series.
+              <span className="whitespace-nowrap">
+                Dr. Lindsey McCall medical mystery
+              </span>
+              <br />
+              series.
             </p>
 
             <div className="order-2 flex max-w-[610px] flex-col items-center gap-8 lg:order-1 lg:flex-1 lg:items-start lg:gap-14">
@@ -89,8 +93,8 @@ export default function HeroSection() {
                     transgender issues and medical ethics.
                   </p>
                 </div>
-                <button className="flex h-auto w-fit items-center gap-2.5 rounded-[5px] bg-white px-4 py-2.5 transition-colors hover:bg-opacity-90 lg:px-5">
-                  <span className="font-['Questrial'] text-[12px] font-bold uppercase leading-none text-[#592c33] sm:text-[14px] lg:text-[16px]">
+                <button className="flex h-auto w-fit items-center justify-center rounded-[4px] bg-white px-3.5 py-2 transition-colors hover:bg-opacity-90 lg:gap-2.5 lg:rounded-[5px] lg:px-5 lg:py-2.5">
+                  <span className="font-['Questrial'] text-[11px] font-bold uppercase leading-none text-[#592c33] sm:text-[12px] lg:text-[16px]">
                     Explore More Books
                   </span>
                   <img
@@ -117,7 +121,7 @@ export default function HeroSection() {
         src={redzigzag}
         alt=""
         aria-hidden="true"
-        className="block w-full -mt-6 lg:-mt-18"
+        className="hidden w-full lg:block lg:-mt-18"
       />
     </>
   );
