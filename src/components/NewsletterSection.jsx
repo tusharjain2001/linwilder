@@ -12,10 +12,12 @@ export default function NewsletterSection() {
   return (
     <section className="bg-[#e4e8d7] px-4 py-6 sm:px-6 lg:px-0 lg:py-[25px]">
       <div className="mx-auto flex max-w-[1300px] flex-col items-center gap-5 text-center lg:grid lg:grid-cols-[560px_430px] lg:items-center lg:gap-x-10 lg:px-[75px] lg:text-left">
-        <h2 className="w-full max-w-[360px] font-['Sedan_SC'] text-[15px] uppercase leading-[1.2] tracking-[0.03em] text-[#6e4040] lg:max-w-[560px] lg:text-[24px] lg:leading-[1.22]">
-          Sign Up for The Sunday Reflections on Writing, Tour,
-          
-          and More
+        <h2 className="w-full max-w-[360px] font-['Sedan_SC'] text-[12px] uppercase leading-[1.2] tracking-[0.03em] text-[#6e4040] lg:max-w-[560px] lg:text-[24px] lg:leading-[1.22]">
+          <span className="whitespace-nowrap">
+            Sign Up for The Sunday Reflections on Writing,
+          </span>
+          <br className="lg:hidden" />
+          {' '}Tour, and More
         </h2>
 
         <form
