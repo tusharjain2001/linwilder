@@ -10,7 +10,7 @@ export default function ContactForm() {
           Have a Question? Contact Us
         </h1>
 
-        <p className="mb-3 max-w-[600px] font-['Questrial'] text-[13px] leading-6 text-black sm:text-[14px] lg:mb-4 lg:text-base lg:leading-7">
+        <p className="mb-3  font-['Questrial'] text-[13px] leading-6 text-black sm:text-[14px] lg:mb-4 lg:text-base lg:leading-7">
           If you would like more information about any of my books please do not hesitate to contact me with the below form.
         </p>
 
