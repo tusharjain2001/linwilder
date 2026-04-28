@@ -1,6 +1,6 @@
 function LatestPostCard({ post }) {
   return (
-    <article className="flex flex-col gap-5 w-full max-w-[343px]">
+    <article className="flex flex-col gap-5 w-full">
       <a
         href={post.url}
         target="_blank"
@@ -23,15 +23,15 @@ function LatestPostCard({ post }) {
       </div>
 
       <div className="flex flex-col gap-1">
-        <p className="font-['Questrial'] text-black text-sm leading-[29px]">
-          <span className="underline">{post.author}</span>
-          {'  '}{post.dateDisplay}
+        <p className="flex items-center gap-1.5 font-['Questrial'] text-black text-sm leading-7.25">
+          <span className="underline">{post.author.replace(/\b\w/g, (c) => c.toUpperCase())}</span>
+          <span>{post.dateDisplay}</span>
         </p>
         <a
           href={post.url}
           target="_blank"
           rel="noreferrer"
-          className="font-['Aboreto'] text-black text-base leading-[29px] hover:text-[#592c33] transition"
+          className="font-['Aboreto'] text-black text-base leading-7.25 hover:text-[#592c33] transition"
         >
           {post.title}
         </a>
@@ -52,7 +52,7 @@ export default function SRLatestPosts({ posts }) {
           latest sunday <span className="normal-case font-['Aboreto']">Reflections</span>
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-[93px] items-start justify-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-23.25 w-full">
           {posts.map((post) => (
             <LatestPostCard key={post.id ?? post.slug ?? post.title} post={post} />
           ))}

@@ -18,7 +18,7 @@ function PostCard({ post }) {
       </div>
 
       <p className="font-['Questrial'] text-black text-sm leading-[29px]">
-        <span className="underline">{post.author}</span>
+        <span className="underline">{post.author.replace(/\b\w/g, (c) => c.toUpperCase())}</span>
         {' '}{post.dateDisplay}
       </p>
 
