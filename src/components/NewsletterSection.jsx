@@ -25,14 +25,14 @@ export default function NewsletterSection() {
 
         <form
           onSubmit={handleSubmit}
-          className="flex w-full max-w-[360px] overflow-hidden rounded-[6px] bg-white shadow-[0_0_0_1px_rgba(206,203,193,1)] lg:max-w-[430px] lg:justify-self-start lg:rounded-[4px]"
+          className="flex w-full max-w-[360px] overflow-hidden rounded-[6px] bg-white shadow-[0_0_0_1px_rgba(206,203,193,1)] lg:max-w-[430px] lg:justify-self-start lg:rounded-[10px]"
         >
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
-            className="w-full bg-white px-4 py-2.5 font-['Questrial'] text-[14px] leading-5 text-[#6e6e6e] outline-none placeholder:text-[#a2a2a2] lg:px-4 lg:py-[10px] lg:text-[12px] lg:leading-none"
+            className="w-full bg-white px-4 py-2.5 font-['Questrial'] text-[14px] leading-5 text-[#6e6e6e] outline-none placeholder:text-[#a2a2a2] lg:px-4 lg:py-[15px] lg:text-[12px] lg:leading-none"
           />
           <button
             type="submit"

@@ -84,7 +84,7 @@ export default function AwardsBanner() {
           </p>
         </div>
 
-        <div className="hidden h-[53px] w-px flex-shrink-0 bg-white opacity-40 lg:block" />
+        <div className="hidden h-[53px] w-[2px] flex-shrink-0 bg-white opacity-40 lg:block" />
 
         <div className="hidden w-[347px] flex-col gap-1 lg:flex">
           <p className="font-['Sedan_SC'] text-lg leading-8 text-white">
