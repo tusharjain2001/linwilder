@@ -37,6 +37,11 @@ export default function FeaturedBooks() {
   const desktopVisible = 4;
   const desktopCardWidth = 286;
   const desktopGap = 32;
+  const mobileCardWidth = 107;
+  const mobileGap = 12;
+  const mobileVisible = 3;
+  const mobileViewportWidth =
+    mobileVisible * mobileCardWidth + (mobileVisible - 1) * mobileGap;
   const desktopPeekWidth = Math.round(desktopCardWidth / 2);
   const desktopViewportWidth =
     desktopVisible * desktopCardWidth +
@@ -59,14 +64,14 @@ export default function FeaturedBooks() {
   const prev = () => setStartIndex((i) => Math.max(0, i - 1));
   const next = () => setStartIndex((i) => Math.min(activeMaxIndex, i + 1));
   const desktopTranslateX = startIndex * (desktopCardWidth + desktopGap);
-  const mobileTranslateX = startIndex * 136;
+  const mobileTranslateX = startIndex * (mobileCardWidth + mobileGap);
 
   return (
     <section className="bg-[#e4e8d7] py-12 lg:py-16">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-4 sm:px-6 lg:gap-16 lg:px-8">
         <div className="mx-auto flex max-w-[686px] flex-col items-center gap-6 text-center lg:gap-8">
-          <div className="rounded-[3px] bg-[#b83431] px-4 py-2 lg:py-1">
-            <p className="font-['Questrial'] text-[14px] leading-[20px] text-white lg:text-xl lg:leading-[45px]">
+          <div className="inline-flex w-fit max-w-[320px] rounded-[3px] bg-[#b83431] px-3 py-2 lg:max-w-none lg:px-4 lg:py-1">
+            <p className="font-['Questrial'] text-[14px] leading-[18px] text-white lg:text-xl lg:leading-[45px]">
               The Reluctant Queen 1st Place Feathered{' '}
               <span className="text-[#f6efe9]">Quill BEST BOOKS OF 2022!</span>
             </p>
@@ -83,9 +88,12 @@ export default function FeaturedBooks() {
         </div>
 
         <div className="flex flex-col items-center gap-8 lg:gap-10">
-          <div className="w-full overflow-hidden px-1 py-5 lg:hidden">
+          <div
+            className="w-full overflow-hidden px-[9px] py-5 lg:hidden"
+            style={{ maxWidth: `${mobileViewportWidth + 18}px` }}
+          >
             <div
-              className="flex items-start gap-4 transition-transform duration-500 ease-out will-change-transform"
+              className="flex min-h-[245px] items-start gap-3 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${mobileTranslateX}px)` }}
             >
               {books.map((book, i) => (
@@ -95,15 +103,16 @@ export default function FeaturedBooks() {
                   return (
                 <div
                   key={`${book.title}-${i}`}
-                  className={`flex w-[120px] shrink-0 flex-col items-start gap-3 transition-transform duration-300 ${
+                  className={`flex shrink-0 flex-col items-start gap-3 transition-transform duration-300 ${
                     isMobileCenterCard ? '-translate-y-3' : ''
                   }`}
+                  style={{ width: `${mobileCardWidth}px` }}
                 >
                   <div
                     className={`relative w-full overflow-hidden shadow-[6px_7px_12px_0px_rgba(0,0,0,0.22)] transition-all duration-300 ${
                       isMobileCenterCard
-                        ? 'h-[194px] shadow-[8px_10px_16px_0px_rgba(0,0,0,0.26)]'
-                        : 'h-[180px]'
+                        ? 'h-[178px] shadow-[8px_10px_16px_0px_rgba(0,0,0,0.26)]'
+                        : 'h-[164px]'
                     }`}
                   >
                     <img
