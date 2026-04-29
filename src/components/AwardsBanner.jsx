@@ -30,23 +30,23 @@ export default function AwardsBanner() {
     setMobileSlideIndex((index) => (index === mobileAwardSlides.length - 1 ? 0 : index + 1));
 
   return (
-    <section className="relative z-30 overflow-visible bg-[#592c33] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-3 lg:hidden">
+    <section className="relative z-30 overflow-visible bg-[#592c33] px-2 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div className=" flex max-w-[1200px] items-center justify-between gap-3 lg:hidden">
         <button
           type="button"
           onClick={showPreviousSlide}
           aria-label="Show previous award"
-          className="flex h-9 w-9 shrink-0 items-center justify-center transition-opacity hover:opacity-80"
+          className="flex h-7 w-7 shrink-0 items-center justify-center transition-opacity hover:opacity-80"
         >
           <img src={leftGoldenArrow} alt="" className="h-5 w-5 object-contain" />
         </button>
 
-        <div className="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <div className="flex min-w-0 flex-1 items-center justify-between gap-2">
           <div className="flex max-w-[235px] flex-1 flex-col gap-2">
             <p className="font-['Sedan_SC'] text-[16px] leading-[21px] text-white">
               {mobileAwardSlides[mobileSlideIndex].heading}
             </p>
-            <p className="font-['Questrial'] text-[12px] leading-[17px] text-white">
+            <p className="font-['Questrial'] text-[12px] leading-[17px] tracking-wide text-white">
               {mobileAwardSlides[mobileSlideIndex].body}
             </p>
           </div>
