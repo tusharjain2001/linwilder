@@ -2,11 +2,11 @@ export default function ContactForm() {
   return (
     <section className="bg-[#f6efe9] px-8 py-8 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1027px] rounded-[10px] bg-white px-6 py-6 sm:px-6 sm:py-8 lg:px-[74px] lg:py-[64px]">
-        <p className="mb-2 font-['Questrial'] text-[10px] uppercase tracking-wide text-black sm:text-xs lg:mb-3 lg:text-base">
+        <p className="md:mb-2 font-['Questrial'] text-[10px] uppercase tracking-wide text-black sm:text-xs lg:mb-3 lg:text-base">
           Get In Touch
         </p>
 
-        <h1 className="mb-3 font-['Sedan_SC'] text-[18px] leading-[1.2] text-black sm:text-[28px] lg:mb-4 lg:text-[36px] lg:leading-[44px]">
+        <h1 className="mb-1 md:mb-3 font-['Sedan_SC'] text-[18px] leading-[1.2] text-black sm:text-[28px] lg:mb-4 lg:text-[36px] lg:leading-[44px]">
           Have a Question? Contact Us
         </h1>
 
