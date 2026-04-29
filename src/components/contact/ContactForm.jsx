@@ -2,7 +2,7 @@ export default function ContactForm() {
   return (
     <section className="bg-[#f6efe9] px-8 py-8 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1027px] rounded-[10px] bg-white px-6 py-6 sm:px-6 sm:py-8 lg:px-[74px] lg:py-[64px]">
-        <p className="md:mb-2 font-['Questrial'] text-[10px] uppercase tracking-wide text-black sm:text-xs lg:mb-3 lg:text-base">
+        <p className="md:mb-2 font-['Questrial'] text-[10px] tracking-wide text-black sm:text-xs lg:mb-3 lg:text-base">
           Get In Touch
         </p>
 
