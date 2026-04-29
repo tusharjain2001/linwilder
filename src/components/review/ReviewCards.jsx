@@ -34,7 +34,7 @@ function ReviewCard({ review }) {
         </p>
 
         {/* Review text */}
-        <div className="font-['Questrial'] text-[#595959] text-lg leading-8 space-y-6">
+        <div className="font-['Questrial'] text-[#595959] text-sm md:text-lg leading-8 space-y-6">
           {reviewText.split('\n\n').map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
@@ -42,7 +42,7 @@ function ReviewCard({ review }) {
 
         {/* Attribution */}
         <div className="flex items-center justify-end pt-2.5">
-          <span className="font-['Aboreto'] text-[#592c33] text-2xl leading-[18px]">
+          <span className="font-['Aboreto'] text-[#592c33] text-[16px] md:text-2xl leading-[18px]">
             -{review.source}
           </span>
         </div>
