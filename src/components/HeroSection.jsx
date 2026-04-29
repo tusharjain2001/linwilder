@@ -1,4 +1,4 @@
-import heroBg from "../assets/new-home/hero-bg.png";
+import heroBg from "../assets/new-home/hero-bg.svg";
 import bookCover from "../assets/new-home/book-cover.png";
 import award1 from "../assets/new-home/award-1.png";
 import award2 from "../assets/new-home/award-2.png";
@@ -32,11 +32,11 @@ export default function HeroSection() {
               alt="Lin Wilder in scenic landscape"
               className="h-114.5 w-full object-cover object-center"
             />
-            <p className="absolute inset-0 hidden items-center justify-center px-10 text-center font-['Questrial'] text-[32px] leading-8.5 text-[#9d674d] capitalize lg:flex">
+            {/* <p className="absolute inset-0 hidden items-center justify-center px-10 text-center font-['Questrial'] text-[32px] leading-8.5 text-[#9d674d] capitalize lg:flex">
               faith, healing, medicine,
               and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               personal transformation
-            </p>
+            </p> */}
           </div>
         </div>
 
