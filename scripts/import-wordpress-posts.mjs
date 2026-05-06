@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const DEFAULT_SITE_URL = 'https://linwilder.com';
+const DEFAULT_SITE_URL = 'https://blog.linwilder.com';
 const DEFAULT_OUTPUT = 'public/data/sunday-reflections.json';
 const POSTS_PER_PAGE = 100;
 

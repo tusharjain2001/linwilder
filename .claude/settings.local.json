@@ -20,7 +20,7 @@
       "Bash(curl -L -o book-cover.png \"https://www.figma.com/api/mcp/asset/fb83cedc-c6ce-47a2-9203-ba3240e8bdde\")",
       "Bash(python3.exe -c \"from PIL import Image; print\\('ok'\\)\")",
       "Bash(py -3 -c \"from PIL import Image; print\\('ok'\\)\")",
-      "WebFetch(domain:linwilder.com)"
+      "WebFetch(domain:blog.linwilder.com)"
     ]
   }
 }

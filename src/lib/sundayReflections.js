@@ -1,4 +1,4 @@
-const WORDPRESS_SITE_URL = import.meta.env.VITE_WORDPRESS_SITE_URL || 'https://linwilder.com';
+const WORDPRESS_SITE_URL = import.meta.env.VITE_WORDPRESS_SITE_URL || 'https://blog.linwilder.com';
 const WORDPRESS_CATEGORY = import.meta.env.VITE_WORDPRESS_CATEGORY || '';
 
 const ALLOWED_CATEGORIES = [
