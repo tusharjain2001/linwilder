@@ -1,26 +1,9 @@
 import { useEffect, useState } from 'react';
-import bookPlausible from '../assets/images/book-plausible-liars.png';
-import bookFragrance from '../assets/images/book-fragrance.png';
-import bookNarrowPath from '../assets/images/book-narrow-path.png';
-import bookSaul from '../assets/images/book-my-name-is-saul.png';
-import bookReluctantQueen from '../assets/images/book-reluctant-queen.png';
-import bookPriceGenius from '../assets/images/book-price-for-genius.png';
+import { Link } from 'react-router-dom';
 import starIcon from '../assets/images/star.svg';
 import chevronLeft from '../assets/images/chevron-left.svg';
 import chevronRight from '../assets/images/chevron-right.svg';
-
-const books = [
-  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: bookPlausible },
-  { title: 'THE FRAGRANCE SHED BY A VIOLET', rating: '4.3', cover: bookFragrance },
-  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: bookNarrowPath },
-  { title: 'MY NAME IS SAUL', rating: '4.7', cover: bookSaul },
-  { title: 'THE RELUCTANT QUEEN', rating: '4.8', cover: bookReluctantQueen },
-  { title: 'A PRICE FOR GENIUS', rating: '4.6', cover: bookPriceGenius },
-  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: bookPlausible },
-  { title: 'THE FRAGRANCE SHED BY A VIOLET', rating: '4.3', cover: bookFragrance },
-  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: bookNarrowPath },
-  { title: 'MY NAME IS SAUL', rating: '4.7', cover: bookSaul },
-];
+import { books } from '../lib/books';
 
 function RatingBadge({ rating }) {
   return (
@@ -101,8 +84,9 @@ export default function FeaturedBooks() {
                   const isMobileCenterCard = i === startIndex + 1;
 
                   return (
-                <div
+                <Link
                   key={`${book.title}-${i}`}
+                  to={book.path}
                   className={`flex shrink-0 flex-col items-start gap-3 transition-transform duration-300 ${
                     isMobileCenterCard ? '-translate-y-3' : ''
                   }`}
@@ -123,7 +107,7 @@ export default function FeaturedBooks() {
                   </div>
                   <div className="flex w-full items-start justify-between gap-2 min-h-[52px]">
                     <span className="flex-1 font-['Sedan_SC'] text-[11px] leading-[1.2] text-black">
-                      {book.title}
+                      {book.displayTitle}
                     </span>
                     <div className="flex h-[20px] shrink-0 items-center gap-1 rounded-[31px] bg-[#b83431] px-1.5">
                       <span className="font-['Sedan_SC'] text-[10px] leading-none text-white">
@@ -132,7 +116,7 @@ export default function FeaturedBooks() {
                       <img src={starIcon} alt="star" className="h-[10px] w-[10px]" />
                     </div>
                   </div>
-                </div>
+                </Link>
                   );
                 })()
               ))}
@@ -148,8 +132,9 @@ export default function FeaturedBooks() {
               style={{ transform: `translateX(-${desktopTranslateX}px)` }}
             >
               {books.map((book, i) => (
-                <div
+                <Link
                   key={`${book.title}-${i}-desktop`}
+                  to={book.path}
                   className="flex w-[286px] shrink-0 flex-col gap-6 items-start"
                 >
                   <div className="relative h-[429px] w-full shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:shadow-[14px_18px_24px_0px_rgba(0,0,0,0.28)]">
@@ -161,11 +146,11 @@ export default function FeaturedBooks() {
                   </div>
                   <div className="flex min-h-[88px] w-full items-start gap-4">
                     <span className="flex-1 font-['Sedan_SC'] text-xl leading-[34px] text-black">
-                      {book.title}
+                      {book.displayTitle}
                     </span>
                     <RatingBadge rating={book.rating} />
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

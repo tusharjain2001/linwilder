@@ -1,7 +1,7 @@
 import trailerThumb from '../../assets/images/book/trailer-thumb.png';
 // import playBtn from '../../assets/images/play-btn.svg';
 
-export default function BookTrailer() {
+export default function BookTrailer({ trailerImage = trailerThumb }) {
   return (
     <section className="bg-[#efd3b1] px-4 pb-16 pt-6 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
       <div className="mx-auto flex max-w-[1297px] flex-col items-center gap-4 lg:gap-6">
@@ -11,7 +11,7 @@ export default function BookTrailer() {
 
         <div className="group relative w-full max-w-[320px] cursor-pointer overflow-hidden rounded-[10px] lg:h-[501px] lg:max-w-none">
           <img
-            src={trailerThumb}
+            src={trailerImage}
             alt="Book trailer thumbnail"
             className="h-auto w-full object-cover lg:h-full"
           />

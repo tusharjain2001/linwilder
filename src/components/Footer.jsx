@@ -3,30 +3,19 @@ import emailIcon from "../assets/images/email-icon.svg";
 import twitterIcon from "../assets/images/red-twitter.svg";
 import amazonIcon from "../assets/images/red-amazon.svg";
 import googleIcon from "../assets/images/red-google.svg";
+import { books, defaultBook } from "../lib/books";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Book", path: "/book" },
+  { label: "Book", path: defaultBook.path },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
   { label: "Sunday Reflections", path: "/sunday-reflections" },
   { label: "Review", path: "/review" },
 ];
 
-const booksCol1 = [
-  { label: "Fragrance Shed by Violet", path: "/book" },
-  { label: "Finding The Narrow Path", path: "/book" },
-  { label: "Do You Solemnly Swear?", path: "/book" },
-  { label: "Malthus Revisited", path: "/book" },
-  { label: "A Price for Genius", path: "/book" },
-  { label: "I, Claudia", path: "/book" },
-];
-
-const booksCol2 = [
-  { label: "My Name is Saul", path: "/book" },
-  { label: "Plausible Liars", path: "/book" },
-  { label: "The Reluctant Queen", path: "/book" },
-];
+const booksCol1 = books.slice(0, 6).map((book) => ({ label: book.title, path: book.path }));
+const booksCol2 = books.slice(6).map((book) => ({ label: book.title, path: book.path }));
 
 const socialLinks = [
   { href: "https://x.com/LinWilder", icon: twitterIcon, alt: "X" },

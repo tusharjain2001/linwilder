@@ -1,23 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import zigzag from '../../assets/images/zigzag.svg';
-import coverPlausible from '../../assets/images/book/cover-plausible-liars.png';
-import coverNarrowPath from '../../assets/images/book/cover-narrow-path.png';
-import coverSaul from '../../assets/images/book/cover-my-name-is-saul.png';
-import coverPriceGenius from '../../assets/images/book/cover-price-for-genius.png';
 import starIcon from '../../assets/images/star.svg';
 import chevronLeft from '../../assets/images/chevron-left.svg';
 import chevronRight from '../../assets/images/chevron-right.svg';
-
-const books = [
-  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: coverPlausible },
-  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: coverNarrowPath },
-  { title: 'MY NAME IS SAUL', rating: '4.7', cover: coverSaul },
-  { title: 'PRICE FOR GENIUS', rating: '4.2', cover: coverPriceGenius },
-  { title: 'PLAUSIBLE LIARS', rating: '4.3', cover: coverPlausible },
-  { title: 'FINDING THE NARROW PATH', rating: '4.7', cover: coverNarrowPath },
-  { title: 'MY NAME IS SAUL', rating: '4.7', cover: coverSaul },
-  { title: 'PRICE FOR GENIUS', rating: '4.2', cover: coverPriceGenius },
-];
+import { books } from '../../lib/books';
 
 function RatingBadge({ rating }) {
   return (
@@ -76,21 +63,21 @@ export default function MoreBooksGrid() {
         </div>
 
         <div className="mx-auto grid w-fit grid-cols-2 gap-x-12 gap-y-8 lg:hidden">
-          {books.slice(0, 4).map((book, index) => (
-            <div key={`${book.title}-${index}-mobile`} className="flex w-[126px] flex-col items-start gap-1.5">
+          {books.map((book, index) => (
+            <Link key={`${book.title}-${index}-mobile`} to={book.path} className="flex w-[126px] flex-col items-start gap-1.5">
               <div className="relative w-full overflow-hidden shadow-[3px_4px_8px_0px_rgba(0,0,0,0.14)]">
                 <img src={book.cover} alt={book.title} className="block w-full h-auto object-cover" />
               </div>
               <div className="flex w-full items-end justify-between gap-1 min-h-[22px]">
                 <span className="flex-1 pr-1 font-['Sedan_SC'] text-[7px] leading-[1.2] text-black">
-                  {book.title}
+                  {book.displayTitle}
                 </span>
                 <div className="flex h-[12px] flex-shrink-0 items-center gap-0.5 rounded-[31px] bg-[#b83431] px-1.5">
                   <span className="font-['Sedan_SC'] text-[6px] leading-none text-white">{book.rating}</span>
                   <img src={starIcon} alt="star" className="h-[5px] w-[5px]" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -100,7 +87,7 @@ export default function MoreBooksGrid() {
             style={{ transform: `translateX(-${translateX}px)` }}
           >
             {books.map((book, index) => (
-              <div key={`${book.title}-${index}`} className="flex flex-col gap-6 items-start w-[286px] shrink-0">
+              <Link key={`${book.title}-${index}`} to={book.path} className="flex flex-col gap-6 items-start w-[286px] shrink-0">
                 <div className="relative w-full h-[429px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)]">
                   <img
                     src={book.cover}
@@ -110,11 +97,11 @@ export default function MoreBooksGrid() {
                 </div>
                 <div className="flex items-start justify-between w-full gap-3 min-h-[88px]">
                   <span className="font-['Sedan_SC'] text-black text-xl leading-[34px] flex-1">
-                    {book.title}
+                    {book.displayTitle}
                   </span>
                   <RatingBadge rating={book.rating} />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

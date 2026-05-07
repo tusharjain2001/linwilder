@@ -4,7 +4,7 @@ import quoteIcon from '../assets/images/quote.svg';
 import chevronLeft from '../assets/images/chevron-left.svg';
 import chevronRight from '../assets/images/chevron-right.svg';
 
-const testimonials = [
+const defaultTestimonials = [
   {
     text: `"Plausible Liars" by Lin Wilder is a thought-provoking and gripping novel that tackles contemporary issues with depth and precision. Pulitzer Prize-winning journalist Kate Townsend's journey into the world of transgender politics, alongside Lindsey McCall's legal challenges, makes for a compelling read. Wilder's exploration of complex characters and medical mysteries is both innovative and engaging, leaving readers eager for more.`,
     author: '-Nadia',
@@ -43,7 +43,10 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({
+  title = 'WHAT PEOPLE SAY ABOUT PLAUSIBLE LIARS',
+  testimonials = defaultTestimonials,
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const maxIndex = testimonials.length - 1;
 
@@ -66,7 +69,7 @@ export default function TestimonialsSection() {
             </span>
           </div>
           <h2 className="max-w-[280px] font-['Sedan_SC'] text-[20px] leading-[1.45] text-black lg:max-w-none lg:text-[32px] lg:leading-[34px]">
-            WHAT PEOPLE SAY ABOUT PLAUSIBLE LIARS
+            {title}
           </h2>
         </div>
 
