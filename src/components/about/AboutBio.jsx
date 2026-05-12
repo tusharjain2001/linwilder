@@ -8,18 +8,30 @@ export default function AboutBio() {
           ABOUT LINWILDER
         </h1>
 
-        <p className="font-['Questrial'] text-[#595959] mt-[-10px] text-sm md:text-lg leading-[34px]">
-          Lin Wilder holds a doctorate in Public Health from the University of Texas at Houston and
-          has over thirty years in academic health care administration. After serving as Hospital
-          Director at UMASS Medical Center, she began writing fiction and has since won numerous
-          awards for her novels. Her medical mystery series includes titles like The Fragrance Shed
-          by A Violet and Plausible Liars, with the second edition released in December 2024. Lin
-          is also working on One Smooth Stone, about King David&apos;s early life, and her ancient
-          novel series features I, Claudia and My Name is Saul, with The Reluctant Queen winning
-          first place in Feathered Quill&apos;s Best Books of 2022. Her memoir, Finding the Narrow
-          Path, details her spiritual journey. Lin resides in the Texas Hill Country with her
-          husband and dogs.
-        </p>
+        <div className="mt-[-10px] space-y-6 font-['Questrial'] text-sm leading-[34px] text-[#595959] md:text-lg">
+          <p>
+            Lin Wilder has a doctorate in Public Health from the University of Texas at Houston,
+            with a background in cardiopulmonary physiology, medical ethics, and hospital
+            administration. During her thirty-plus years in academic health care administration,
+            Lin authored numerous texts in these fields.
+          </p>
+          <p>
+            She began writing fiction only after leaving UMASS Medical Center, where she had been
+            Hospital Director. Since then, Lin&apos;s been the recipient of an extensive array of
+            awards for her two series of novels. Her medical mystery series includes: The
+            Fragrance Shed by A Violet, Do You Solemnly Swear? A Price for Genius and Malthus
+            Revisited and Plausible Liars. Plausible Liars, 2nd edition, was released in December
+            2024. Lin is currently writing One Smooth Stone- the story of the early life of King
+            David.
+          </p>
+          <p>
+            Lin&apos;s ancient novel series includes I, Claudia, and My Name is Saul. The third in
+            that series, The Reluctant Queen, took first place for historical and religious fiction
+            in Feathered Quill&apos;s Best Books of 2022. In addition, her memoir, Finding the
+            Narrow Path, recounts her journey away from God and back again. Lin lives in the Texas
+            Hill Country with her husband and dogs.
+          </p>
+        </div>
 
         {/* Signature */}
         <div className="mt-6">

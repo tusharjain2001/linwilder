@@ -1,6 +1,7 @@
 import authorPhoto from '../assets/images/author-photo.png';
 import authorSignature from '../assets/images/author-signature.png';
 import arrowRight from '../assets/images/arrow-right-dark.svg';
+import { Link } from 'react-router-dom';
 
 export default function AuthorSection() {
   return (
@@ -24,12 +25,15 @@ export default function AuthorSection() {
               her thirty-plus years in academic health care administration, Lin authored numerous
               texts in these fields.
             </p>
-            <div className="flex items-center gap-2 border-b border-[#592c33] pb-0.5 self-start mt-2">
+            <Link
+              to="/about"
+              className="mt-2 flex items-center gap-2 self-start border-b border-[#592c33] pb-0.5"
+            >
               <span className="font-['Questrial'] text-[#592c33] text-lg whitespace-nowrap">
                 Read More about the Author
               </span>
               <img src={arrowRight} alt="" className="w-6 h-6 rotate-90" />
-            </div>
+            </Link>
           </div>
 
           {/* Signature */}
@@ -69,12 +73,15 @@ export default function AuthorSection() {
           these fields.
         </p>
 
-        <div className="mt-6 inline-flex items-center gap-2 border-b border-[#592c33] pb-0.5">
+        <Link
+          to="/about"
+          className="mt-6 inline-flex items-center gap-2 border-b border-[#592c33] pb-0.5"
+        >
           <span className="font-['Questrial'] text-[15px] text-[#592c33]">
             Read More about the Author
           </span>
           <img src={arrowRight} alt="" className="h-5 w-5 rotate-90" />
-        </div>
+        </Link>
 
         <div className="mt-7">
           <img
