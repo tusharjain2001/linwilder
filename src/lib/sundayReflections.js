@@ -74,8 +74,13 @@ function getCategories(post) {
     .filter(Boolean);
 }
 
+function toHttps(url) {
+  if (!url) return null;
+  return url.replace(/^http:\/\//i, 'https://');
+}
+
 function getFeaturedImage(post) {
-  return post?._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null;
+  return toHttps(post?._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null);
 }
 
 function getAuthor(post) {
@@ -106,7 +111,7 @@ function normalizePost(post) {
     author: getAuthor(post),
     dateIso: publishedAt,
     dateDisplay: formatDate(publishedAt),
-    url: post.link,
+    url: toHttps(post.link),
     category: categories[0] ?? 'Uncategorized',
     categories,
     featuredImage: getFeaturedImage(post),
