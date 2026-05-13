@@ -3,6 +3,7 @@ import emailIcon from "../assets/images/email-icon.svg";
 import twitterIcon from "../assets/images/red-twitter.svg";
 import amazonIcon from "../assets/images/red-amazon.svg";
 import googleIcon from "../assets/images/red-google.svg";
+import facebookIcon from "../assets/images/facebookfooter.svg";
 import { books, defaultBook } from "../lib/books";
 
 const navLinks = [
@@ -23,6 +24,11 @@ const socialLinks = [
     href: "https://www.goodreads.com/author/show/7944373.Lin_Wilder",
     icon: googleIcon,
     alt: "Goodreads",
+  },
+  {
+    href: "https://www.facebook.com/lincwilder/",
+    icon: facebookIcon,
+    alt: "Facebook",
   },
   {
     href: "https://www.amazon.com/stores/Dr.-Lin-Wilder/author/B007L380OM?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true",
