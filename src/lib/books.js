@@ -1,5 +1,5 @@
 import bookPlausible from '../assets/images/book-plausible-liars.png';
-import bookFragrance from '../assets/images/book-fragrance.png';
+import bookFragrance from '../assets/images/book-fragrance.jpg';
 import bookNarrowPath from '../assets/images/book-narrow-path.png';
 import bookSaul from '../assets/images/book-my-name-is-saul.png';
 import bookReluctantQueen from '../assets/images/book-reluctant-queen.png';
@@ -9,7 +9,7 @@ import bookMalthus from '../assets/new-home/malthus.png';
 import bookClaudia from '../assets/new-home/claudia.png';
 
 const BOOK_TITLES = [
-  'The Fragrance Shed by a Violet',
+  'The Dr. Lindsey McCall Medical Mystery Series',
   'Finding The Narrow Path',
   'Do You Solemnly Swear?',
   'Malthus Revisited',

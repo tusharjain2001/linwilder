@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import reviewBook from '../assets/images/review-book.png';
 import arrowRight from '../assets/images/arrow-right-dark.svg';
 import chevronLeft from '../assets/images/chevron-left.svg';
@@ -12,7 +13,7 @@ export default function ReviewSection() {
             January 26, 2026
           </p>
           <h2 className="font-['Sedan_SC'] text-[16px] leading-[34px] text-[#592c33] lg:mt-2 lg:text-[32px] lg:leading-[34px]">
-            THE INDIE CRITIC REVIEW
+            C.R. HURST REVIEW
           </h2>
           <p className="font-['Questrial'] text-[12px] leading-6 text-[#592c33] lg:mt-1 lg:text-lg">
             ABOUT PLAUSIBLE LIARS
@@ -36,18 +37,20 @@ export default function ReviewSection() {
 
           <div className="max-w-[343px] text-center">
             <p className="font-['Questrial'] text-[12px] leading-[18px] tracking-[0.48px] text-[#595959]">
-              Plausible Liars, the fifth and concluding novel in Lin Wilder&apos;s Dr. Lindsey
-              McCall Medical Mystery series, is a bold medical-legal thriller that directly
-              engages with contemporary ethical, political, and cultural tensions. Wilder places
-              physician Lindsey McCall and Pulitzer Prize-winning investigative journalist Kate
-              Townsend at the center of a conspiracy involving federal indictment, controversial
-              medical research, and explosive social debate.
+              The book is a complex and compelling read, where political agendas regarding
+              hot-button issues are the mainstay of its plot. Author Lin Wilder is not shy about
+              debating them through her characters and uses some recent high-profile cases
+              regarding detransitioning lawsuits as her inspiration for the indictments against
+              her two main characters, Lynn and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
             </p>
 
-            <div className="mt-3 inline-flex items-center gap-1 border-b border-[#592c33] pb-0.5">
+            <Link
+              to="/review"
+              className="mt-3 inline-flex items-center gap-1 border-b border-[#592c33] pb-0.5"
+            >
               <span className="font-['Questrial'] text-[10px] text-[#592c33]">Read More</span>
               <img src={arrowRight} alt="" className="h-[11px] w-[11px] rotate-90" />
-            </div>
+            </Link>
           </div>
         </div>
 
@@ -65,20 +68,22 @@ export default function ReviewSection() {
               </div>
 
               <p className="font-['Questrial'] text-lg leading-8 text-[#595959]">
-                Plausible Liars, the fifth and concluding novel in Lin Wilder&apos;s Dr. Lindsey
-                McCall Medical Mystery series, is a bold medical-legal thriller that directly
-                engages with contemporary ethical, political, and cultural tensions. Wilder places
-                physician Lindsey McCall and Pulitzer Prize-winning investigative journalist Kate
-                Townsend at the center of a conspiracy involving federal indictment, controversial
-                medical research, and explosive social debate.
+                The book is a complex and compelling read, where political agendas regarding
+                hot-button issues are the mainstay of its plot. Author Lin Wilder is not shy about
+                debating them through her characters and uses some recent high-profile cases
+                regarding detransitioning lawsuits as her inspiration for the indictments against
+                her two main characters, Lynn and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
               </p>
 
-              <div className="flex items-center gap-2 border-b border-[#592c33] pb-0.5">
+              <Link
+                to="/review"
+                className="flex items-center gap-2 border-b border-[#592c33] pb-0.5"
+              >
                 <span className="font-['Questrial'] text-lg whitespace-nowrap text-[#592c33]">
                   Read More
                 </span>
                 <img src={arrowRight} alt="" className="h-6 w-6 rotate-90" />
-              </div>
+              </Link>
             </div>
 
             <div className="h-[343px] w-[243px] flex-shrink-0 overflow-hidden">

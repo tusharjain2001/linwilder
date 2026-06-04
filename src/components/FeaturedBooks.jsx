@@ -143,12 +143,14 @@ export default function FeaturedBooks() {
                       alt={book.title}
                       className="h-full w-full object-cover"
                     />
+                    <div className="absolute right-3 top-3">
+                      <RatingBadge rating={book.rating} />
+                    </div>
                   </div>
-                  <div className="flex min-h-[88px] w-full items-start gap-4">
-                    <span className="flex-1 font-['Sedan_SC'] text-xl leading-[34px] text-black">
+                  <div className="min-h-[72px] w-full">
+                    <span className="block font-['Sedan_SC'] text-xl leading-[34px] text-black">
                       {book.displayTitle}
                     </span>
-                    <RatingBadge rating={book.rating} />
                   </div>
                 </Link>
               ))}

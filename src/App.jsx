@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import NewsletterSection from './components/NewsletterSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import BookPage from './pages/BookPage';
 import AboutPage from './pages/AboutPage';
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f6efe9]">
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/book" element={<Navigate to={defaultBook.path} replace />} />
