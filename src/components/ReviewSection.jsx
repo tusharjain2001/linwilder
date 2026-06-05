@@ -41,7 +41,7 @@ export default function ReviewSection() {
               hot-button issues are the mainstay of its plot. Author Lin Wilder is not shy about
               debating them through her characters and uses some recent high-profile cases
               regarding detransitioning lawsuits as her inspiration for the indictments against
-              her two main characters, Lynn and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
+              her two main characters, Lindsey and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
             </p>
 
             <Link
@@ -72,7 +72,7 @@ export default function ReviewSection() {
                 hot-button issues are the mainstay of its plot. Author Lin Wilder is not shy about
                 debating them through her characters and uses some recent high-profile cases
                 regarding detransitioning lawsuits as her inspiration for the indictments against
-                her two main characters, Lynn and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
+                her two main characters, Lindsey and Kate. As far-fetched as those charges might appear, they are nevertheless grounded in uncomfortable truths about American culture.
               </p>
 
               <Link
