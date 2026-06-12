@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bookCover from '../assets/images/book-plausible-liars.png';
+import bookCover from '../assets/images/newbookcover.jpeg';
 import leftGoldenArrow from '../assets/images/left-golden-arrow.png';
 import rightGoldenArrow from '../assets/images/right-golden-arrow.png';
 
@@ -95,12 +95,12 @@ export default function AwardsBanner() {
           </p>
         </div>
 
-        <div className="flex shrink-0 items-center justify-center lg:absolute lg:right-4 lg:top-[-54px] lg:h-[255px] lg:w-[203px] md:lg:right-[110px]">
-          <div className="h-[136px] w-[91px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] lg:h-[224px] lg:w-[149px] lg:rotate-[15.25deg]">
+        <div className="flex shrink-0 items-center justify-center lg:absolute lg:right-4 lg:top-[-54px] lg:h-[255px] lg:w-[290px] md:lg:right-[110px]">
+          <div className="h-[136px] w-[91px] shadow-[8px_9px_10px_0px_rgba(0,0,0,0.25)] lg:h-[224px] lg:w-[250px] lg:rotate-[15.25deg]">
             <img
               src={bookCover}
               alt="Plausible Liars"
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
