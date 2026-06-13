@@ -18,7 +18,7 @@ const mobileAwardSlides = [
         CELEBRATING <span className="text-[#efd3b1]">LINWILDER</span>
       </>
     ),
-    body: "New Award reader's FAVOURITE Best Books of 2024 for Mystery-Legal Fiction",
+    body: "Book Excellence Awards 2025: The Dr. Lindsey McCall Medical Mystery Series – Books in a Series",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function AwardsBanner() {
             CELEBRATING <span className="text-[#efd3b1]">LINWILDER</span>
           </p>
           <p className="font-['Questrial'] text-lg leading-[21px] text-white">
-            New Award reader's FAVOURITE Best Books of 2024 for Mystery-Legal Fiction
+            Book Excellence Awards 2025: The Dr. Lindsey McCall Medical Mystery Series – Books in a Series
           </p>
         </div>
 
