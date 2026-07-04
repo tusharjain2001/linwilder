@@ -204,7 +204,7 @@ export default function Footer() {
             </span>
 
             <span className="font-['Inter'] text-center text-base leading-4 text-white">
-              Copyright © 2023. All rights reserved
+              Copyright © 2026. All rights reserved
             </span>
 
             <div className="flex items-center justify-end gap-5">
