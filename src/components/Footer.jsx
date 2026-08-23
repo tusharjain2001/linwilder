@@ -58,7 +58,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <img src={emailIcon} alt="Email" className="h-3 w-[13px] shrink-0" />
               <span className="font-['Questrial'] text-[16px] md:text-[12px] leading-5 text-[#f6efe9]">
-                linwilder@gmail.com
+                lin@linwilder.com
               </span>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <img src={emailIcon} alt="Email" className="h-4 w-5 flex-shrink-0" />
                 <span className="font-['Questrial'] text-base leading-5 text-[#f6efe9]">
-                  linwilder@gmail.com
+                  lin@linwilder.com
                 </span>
               </div>
             </div>

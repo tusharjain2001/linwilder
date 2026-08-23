@@ -15,7 +15,7 @@ export default function ContactForm() {
         </p>
 
         <p className="mb-6 font-['Questrial'] text-[13px] leading-6 text-black sm:text-[14px] lg:mb-8 lg:text-xl lg:leading-8">
-          Email: linwilder@gmail.com
+          Email: lin@linwilder.com
         </p>
 
         <form className="flex flex-col gap-4 lg:gap-6">
