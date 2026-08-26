@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import starIcon from '../assets/images/star.svg';
 import chevronLeft from '../assets/images/chevron-left.svg';
 import chevronRight from '../assets/images/chevron-right.svg';
-import { books } from '../lib/books';
+import { featuredBooks } from '../lib/books';
 
 function RatingBadge({ rating }) {
   return (
@@ -30,8 +30,8 @@ export default function FeaturedBooks() {
     desktopVisible * desktopCardWidth +
     (desktopVisible - 1) * desktopGap +
     desktopPeekWidth;
-  const maxIndex = Math.max(books.length - desktopVisible, 0);
-  const mobileMaxIndex = Math.max(books.length - 3, 0);
+  const maxIndex = Math.max(featuredBooks.length - desktopVisible, 0);
+  const mobileMaxIndex = Math.max(featuredBooks.length - 3, 0);
   const activeMaxIndex = isDesktop ? maxIndex : mobileMaxIndex;
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function FeaturedBooks() {
               className="flex min-h-[245px] items-start gap-3 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${mobileTranslateX}px)` }}
             >
-              {books.map((book, i) => (
+              {featuredBooks.map((book, i) => (
                 (() => {
                   const isMobileCenterCard = i === startIndex + 1;
 
@@ -131,7 +131,7 @@ export default function FeaturedBooks() {
               className="flex items-end gap-8 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${desktopTranslateX}px)` }}
             >
-              {books.map((book, i) => (
+              {featuredBooks.map((book, i) => (
                 <Link
                   key={`${book.title}-${i}-desktop`}
                   to={book.path}

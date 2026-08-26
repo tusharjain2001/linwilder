@@ -5,7 +5,7 @@ import twitterIcon from '../assets/images/social-twitter.svg';
 import amazonIcon from '../assets/images/social-amazon.svg';
 import googleIcon from '../assets/images/social-google.svg';
 import facebookIcon from '../assets/images/facebook-navbar.svg';
-import { books } from '../lib/books';
+import { orderedBooks } from '../lib/books';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -148,7 +148,7 @@ export default function Navbar() {
 
             {isBooksOpen && (
               <div className="absolute left-1/2 top-full mt-4 w-[290px] -translate-x-1/2 overflow-hidden rounded-sm border border-[#592c33]/15 bg-white shadow-[0_18px_40px_rgba(0,0,0,0.16)]">
-                {books.map((book) => (
+                {orderedBooks.map((book) => (
                   <Link
                     key={book.slug}
                     to={book.path}
@@ -213,7 +213,7 @@ export default function Navbar() {
 
             {isMobileBooksOpen && (
               <div className="flex flex-col rounded-sm bg-white/60">
-                {books.map((book) => (
+                {orderedBooks.map((book) => (
                   <Link
                     key={book.slug}
                     to={book.path}
