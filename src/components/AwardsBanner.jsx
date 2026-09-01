@@ -7,10 +7,20 @@ const mobileAwardSlides = [
   {
     heading: (
       <>
-        CELEBRATING EXCELLENCE <span className="text-[#efd3b1]">"PLAUSIBLE LIARS"</span>
+        WINNER <span className="text-[1.22em] leading-none">2026</span>{' '}
+        <span className="text-[#efd3b1]">READERS'</span>
       </>
     ),
-    body: 'Honored as a Book Excellence Award Finalist in the Medical category. Selected from thousands of entries worldwide.',
+    body: (
+      <a
+        href="https://readersfavorite.com/2026-award-contest-winners.htm"
+        target="_blank"
+        rel="noreferrer"
+        className="underline-offset-2 hover:underline"
+      >
+        Favorite Award for Legal Mystery Fiction
+      </a>
+    ),
   },
   {
     heading: (
@@ -75,12 +85,18 @@ export default function AwardsBanner() {
       <div className="mx-auto hidden max-w-[1200px] items-center justify-between gap-6 lg:flex lg:pr-[260px]">
         <div className="flex max-w-[235px] flex-col gap-2 lg:w-[478px] lg:max-w-none lg:gap-1">
           <p className="font-['Sedan_SC'] text-[16px] leading-[21px] text-white lg:text-lg lg:leading-8">
-            CELEBRATING EXCELLENCE{' '}
-            <span className="text-[#efd3b1]">"PLAUSIBLE LIARS"</span>
+            WINNER <span className="text-[1.22em] leading-none">2026</span>{' '}
+            <span className="text-[#efd3b1]">READERS'</span>
           </p>
           <p className="font-['Questrial'] text-[12px] leading-[17px] text-white lg:text-lg lg:leading-[21px]">
-            Honored as a Book Excellence Award Finalist in the Medical category.
-            Selected from thousands of entries worldwide.
+            <a
+              href="https://readersfavorite.com/2026-award-contest-winners.htm"
+              target="_blank"
+              rel="noreferrer"
+              className="underline-offset-2 hover:underline"
+            >
+              Favorite Award for Legal Mystery Fiction
+            </a>
           </p>
         </div>
 
