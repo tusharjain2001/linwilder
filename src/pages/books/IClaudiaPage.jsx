@@ -1,10 +1,9 @@
-import BookPageLayout from '../../components/book/BookPageLayout';
-import IClaudiaHero from '../../components/book/heroes/IClaudiaHero';
-import { createDefaultBookPageProps } from '../../lib/bookPageDefaults';
+import BookDetailLayout from '../../components/book/BookDetailLayout';
+import { createBookDetailProps } from '../../lib/bookDetails';
 import { findBookBySlug } from '../../lib/books';
 
 const book = findBookBySlug('i-claudia');
 
 export default function IClaudiaPage() {
-  return <BookPageLayout {...createDefaultBookPageProps(book)} heroSection={<IClaudiaHero />} />;
+  return <BookDetailLayout {...createBookDetailProps(book)} />;
 }

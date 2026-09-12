@@ -1,10 +1,9 @@
-import BookPageLayout from '../../components/book/BookPageLayout';
-import MyNameIsSaulHero from '../../components/book/heroes/MyNameIsSaulHero';
-import { createDefaultBookPageProps } from '../../lib/bookPageDefaults';
+import BookDetailLayout from '../../components/book/BookDetailLayout';
+import { createBookDetailProps } from '../../lib/bookDetails';
 import { findBookBySlug } from '../../lib/books';
 
 const book = findBookBySlug('my-name-is-saul');
 
 export default function MyNameIsSaulPage() {
-  return <BookPageLayout {...createDefaultBookPageProps(book)} heroSection={<MyNameIsSaulHero />} />;
+  return <BookDetailLayout {...createBookDetailProps(book)} />;
 }

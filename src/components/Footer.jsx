@@ -4,11 +4,11 @@ import twitterIcon from "../assets/images/red-twitter.svg";
 import amazonIcon from "../assets/images/red-amazon.svg";
 import googleIcon from "../assets/images/red-google.svg";
 import facebookIcon from "../assets/images/facebookfooter.svg";
-import { books, defaultBook } from "../lib/books";
+import { books } from "../lib/books";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Book", path: defaultBook.path },
+  { label: "Book", path: "/book" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
   { label: "Sunday Reflections", path: "/sunday-reflections" },

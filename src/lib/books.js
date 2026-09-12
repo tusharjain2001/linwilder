@@ -75,6 +75,23 @@ export const orderedBooks = [
   ...books.filter((book) => !FEATURED_SLUGS.includes(book.slug)),
 ];
 
+const LISTING_SLUGS = [
+  'the-fragrance-shed-by-a-violet',
+  'plausible-liars',
+  'finding-the-narrow-path',
+  'my-name-is-saul',
+  'a-price-for-genius',
+  'the-reluctant-queen',
+  'malthus-revisited',
+  'i-claudia',
+  'do-you-solemnly-swear',
+];
+
+// Books that have a detail page, in the order used by the "View all books" listing.
+export const listingBooks = LISTING_SLUGS.map((slug) =>
+  books.find((book) => book.slug === slug)
+).filter(Boolean);
+
 export const defaultBook = books[0];
 
 export function findBookBySlug(slug) {

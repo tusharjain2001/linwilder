@@ -1,10 +1,9 @@
-import BookPageLayout from '../../components/book/BookPageLayout';
-import MalthusRevisitedHero from '../../components/book/heroes/MalthusRevisitedHero';
-import { createDefaultBookPageProps } from '../../lib/bookPageDefaults';
+import BookDetailLayout from '../../components/book/BookDetailLayout';
+import { createBookDetailProps } from '../../lib/bookDetails';
 import { findBookBySlug } from '../../lib/books';
 
 const book = findBookBySlug('malthus-revisited');
 
 export default function MalthusRevisitedPage() {
-  return <BookPageLayout {...createDefaultBookPageProps(book)} heroSection={<MalthusRevisitedHero />} />;
+  return <BookDetailLayout {...createBookDetailProps(book)} />;
 }

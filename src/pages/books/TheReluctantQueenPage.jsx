@@ -1,10 +1,9 @@
-import BookPageLayout from '../../components/book/BookPageLayout';
-import TheReluctantQueenHero from '../../components/book/heroes/TheReluctantQueenHero';
-import { createDefaultBookPageProps } from '../../lib/bookPageDefaults';
+import BookDetailLayout from '../../components/book/BookDetailLayout';
+import { createBookDetailProps } from '../../lib/bookDetails';
 import { findBookBySlug } from '../../lib/books';
 
 const book = findBookBySlug('the-reluctant-queen');
 
 export default function TheReluctantQueenPage() {
-  return <BookPageLayout {...createDefaultBookPageProps(book)} heroSection={<TheReluctantQueenHero />} />;
+  return <BookDetailLayout {...createBookDetailProps(book)} />;
 }

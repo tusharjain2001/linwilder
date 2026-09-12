@@ -1,10 +1,9 @@
-import BookPageLayout from '../../components/book/BookPageLayout';
-import DoYouSolemnlySwearHero from '../../components/book/heroes/DoYouSolemnlySwearHero';
-import { createDefaultBookPageProps } from '../../lib/bookPageDefaults';
+import BookDetailLayout from '../../components/book/BookDetailLayout';
+import { createBookDetailProps } from '../../lib/bookDetails';
 import { findBookBySlug } from '../../lib/books';
 
 const book = findBookBySlug('do-you-solemnly-swear');
 
 export default function DoYouSolemnlySwearPage() {
-  return <BookPageLayout {...createDefaultBookPageProps(book)} heroSection={<DoYouSolemnlySwearHero />} />;
+  return <BookDetailLayout {...createBookDetailProps(book)} />;
 }
