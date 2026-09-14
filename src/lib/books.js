@@ -75,22 +75,22 @@ export const orderedBooks = [
   ...books.filter((book) => !FEATURED_SLUGS.includes(book.slug)),
 ];
 
-const LISTING_SLUGS = [
+const MYSTERY_SERIES_SLUGS = [
   'the-fragrance-shed-by-a-violet',
-  'plausible-liars',
-  'finding-the-narrow-path',
-  'my-name-is-saul',
-  'a-price-for-genius',
-  'the-reluctant-queen',
-  'malthus-revisited',
-  'i-claudia',
   'do-you-solemnly-swear',
+  'a-price-for-genius',
+  'malthus-revisited',
+  'plausible-liars',
 ];
 
-// Books that have a detail page, in the order used by the "View all books" listing.
-export const listingBooks = LISTING_SLUGS.map((slug) =>
-  books.find((book) => book.slug === slug)
-).filter(Boolean);
+const ANCIENT_SERIES_SLUGS = ['i-claudia', 'my-name-is-saul', 'the-reluctant-queen'];
+
+const booksForSlugs = (slugs) =>
+  slugs.map((slug) => books.find((book) => book.slug === slug)).filter(Boolean);
+
+// Series listings used by the "View all books" page, in reading order.
+export const mysterySeriesBooks = booksForSlugs(MYSTERY_SERIES_SLUGS);
+export const ancientSeriesBooks = booksForSlugs(ANCIENT_SERIES_SLUGS);
 
 export const defaultBook = books[0];
 
