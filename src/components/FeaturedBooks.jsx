@@ -64,7 +64,7 @@ export default function FeaturedBooks() {
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-4 sm:px-6 lg:gap-16 lg:px-8">
         <div className="mx-auto flex max-w-[686px] flex-col items-center gap-6 text-center lg:max-w-[900px] lg:gap-8">
           <h2 className="max-w-[340px] font-['Sedan_SC'] text-[18px] leading-[24px] text-black lg:max-w-none lg:text-[32px] lg:leading-[42px]">
-            Dr. Lindsey McCall Medical Mystery Series Book Excellence Awards 2025 Winner!
+            Dr. Lindsey McCall Medical Mystery Series
           </h2>
           {/* <div className="flex flex-col gap-3 lg:gap-5">
             <h2 className="font-['Sedan_SC'] text-[16px] leading-[22px] text-black lg:text-[32px] lg:leading-[34px]">
