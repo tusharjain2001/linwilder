@@ -1,6 +1,6 @@
-import videoThumb from '../assets/images/video-thumb.png';
-import playBtn from '../assets/images/play-btn.svg';
-import arrowRight from '../assets/images/arrow-right-dark.svg';
+// import videoThumb from '../assets/images/video-thumb.png';
+// import playBtn from '../assets/images/play-btn.svg';
+// import arrowRight from '../assets/images/arrow-right-dark.svg';
 
 export default function VideoSection() {
   return (
@@ -16,15 +16,15 @@ export default function VideoSection() {
             It didn't affect him, so he didn't care about others' sexual choices. But he didn't
             understand what transgender meant. Until now."
           </p>
-          <div className="flex items-center gap-1 self-center border-b border-[#592c33] pb-0.5 lg:self-start">
+          {/* <div className="flex items-center gap-1 self-center border-b border-[#592c33] pb-0.5 lg:self-start">
             <span className="font-['Questrial'] text-[10px] whitespace-nowrap text-[#592c33] lg:text-lg">
               Read More
             </span>
             <img src={arrowRight} alt="" className="h-[11px] w-[11px] rotate-90 lg:h-6 lg:w-6" />
-          </div>
+          </div> */}
         </div>
 
-        <div className="group relative w-full max-w-[347px] cursor-pointer overflow-hidden rounded-[4px] border border-[rgba(89,89,89,0.25)] bg-white lg:h-[343px] lg:w-[489px] lg:max-w-none lg:rounded-[10px]">
+        {/* <div className="group relative w-full max-w-[347px] cursor-pointer overflow-hidden rounded-[4px] border border-[rgba(89,89,89,0.25)] bg-white lg:h-[343px] lg:w-[489px] lg:max-w-none lg:rounded-[10px]">
           <img
             src={videoThumb}
             alt="Video thumbnail"
@@ -33,7 +33,7 @@ export default function VideoSection() {
           <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
             <img src={playBtn} alt="Play" className="h-[40px] w-[40px] lg:h-[43px] lg:w-[43px]" />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

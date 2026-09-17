@@ -61,7 +61,7 @@ export default function TestimonialsSection({
         className="absolute left-0 top-0 h-full w-full object-cover object-top lg:inset-0 lg:h-full"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-8 px-4 py-10 sm:px-6 lg:gap-16 lg:px-8 lg:py-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-8 px-4 pt-16 pb-10 sm:px-6 lg:gap-16 lg:px-8 lg:pt-32 lg:pb-20">
         <div className="flex flex-col items-center gap-4 text-center lg:gap-5">
           <div className="rounded-[19px] border border-[#b83431] px-5 py-[5px] lg:py-1">
             <span className="font-['Questrial'] text-[12px] uppercase leading-[18px] text-[#b83431] lg:text-base">

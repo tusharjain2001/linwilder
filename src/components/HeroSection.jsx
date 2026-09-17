@@ -5,7 +5,7 @@ import award2 from "../assets/new-home/award-2.svg";
 import award3 from "../assets/new-home/award-3.svg";
 import mobileHero from "../assets/mobile/mobile-hero.png";
 import mobileAwards from "../assets/mobile/mobile-awards-in-row.png";
-import arrowRight from "../assets/new-home/arrow-right.svg";
+// import arrowRight from "../assets/new-home/arrow-right.svg";
 import redzigzag from "../assets/new-home/redzigzag.svg";
 
 export default function HeroSection() {
@@ -93,7 +93,7 @@ export default function HeroSection() {
                     transgender issues and medical ethics.
                   </p>
                 </div>
-                <button className="flex h-auto w-fit items-center justify-center rounded-[4px] bg-white px-3.5 py-2 transition-colors hover:bg-opacity-90 lg:gap-2.5 lg:rounded-[5px] lg:px-5 lg:py-2.5">
+                {/* <button className="flex h-auto w-fit items-center justify-center rounded-[4px] bg-white px-3.5 py-2 transition-colors hover:bg-opacity-90 lg:gap-2.5 lg:rounded-[5px] lg:px-5 lg:py-2.5">
                   <span className="font-['Questrial'] text-[11px] font-bold uppercase leading-none text-[#592c33] sm:text-[12px] lg:text-[16px]">
                     Explore More Books
                   </span>
@@ -102,7 +102,7 @@ export default function HeroSection() {
                     alt=""
                     className="hidden h-6 w-6 rotate-90 lg:block"
                   />
-                </button>
+                </button> */}
               </div>
             </div>
 
