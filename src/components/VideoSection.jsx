@@ -34,6 +34,18 @@ export default function VideoSection() {
             <img src={playBtn} alt="Play" className="h-[40px] w-[40px] lg:h-[43px] lg:w-[43px]" />
           </div>
         </div> */}
+
+        <div className="aspect-video w-full max-w-[347px] overflow-hidden rounded-[4px] border border-[rgba(89,89,89,0.25)] bg-black lg:w-[489px] lg:max-w-none lg:shrink-0 lg:rounded-[10px]">
+          <iframe
+            src="https://www.youtube.com/embed/0-Pvb8gJvyk"
+            title="Foreman of the Jury in Plausible Liars"
+            className="h-full w-full"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
       </div>
     </section>
   );
