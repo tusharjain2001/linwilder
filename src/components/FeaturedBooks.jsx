@@ -3,7 +3,17 @@ import { Link } from 'react-router-dom';
 import starIcon from '../assets/images/star.svg';
 import chevronLeft from '../assets/images/chevron-left.svg';
 import chevronRight from '../assets/images/chevron-right.svg';
+import oneSmoothStoneCover from '../assets/images/onesmoothstone.jpeg';
 import { featuredBooks } from '../lib/books';
+
+const carouselBooks = [
+  {
+    title: 'One Smooth Stone',
+    displayTitle: 'ONE SMOOTH STONE – COMING SPRING 2027',
+    cover: oneSmoothStoneCover,
+  },
+  ...featuredBooks,
+];
 
 function RatingBadge({ rating }) {
   return (
@@ -30,8 +40,8 @@ export default function FeaturedBooks() {
     desktopVisible * desktopCardWidth +
     (desktopVisible - 1) * desktopGap +
     desktopPeekWidth;
-  const maxIndex = Math.max(featuredBooks.length - desktopVisible, 0);
-  const mobileMaxIndex = Math.max(featuredBooks.length - 3, 0);
+  const maxIndex = Math.max(carouselBooks.length - desktopVisible, 0);
+  const mobileMaxIndex = Math.max(carouselBooks.length - 3, 0);
   const activeMaxIndex = isDesktop ? maxIndex : mobileMaxIndex;
 
   useEffect(() => {
@@ -52,18 +62,18 @@ export default function FeaturedBooks() {
   return (
     <section className="bg-[#e4e8d7] py-12 lg:py-16">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-4 sm:px-6 lg:gap-16 lg:px-8">
-        <div className="mx-auto flex max-w-[686px] flex-col items-center gap-6 text-center lg:gap-8">
+        <div className="mx-auto flex max-w-[686px] flex-col items-center gap-6 text-center lg:max-w-[900px] lg:gap-8">
           <div className="inline-flex w-fit max-w-[320px] rounded-[3px] bg-[#b83431] px-3 py-2 lg:max-w-none lg:px-4 lg:py-1">
-            <p className="font-['Questrial'] text-[14px] leading-[18px] text-white lg:text-xl lg:leading-[45px]">
-              The Reluctant Queen 1st Place Feathered{' '}
-              <span className="text-[#f6efe9]">Quill BEST BOOKS OF 2022!</span>
+            <p className="font-['Questrial'] text-[14px] leading-[18px] text-white lg:whitespace-nowrap lg:text-xl lg:leading-[45px]">
+              Dr. Lindsey McCall Medical Mystery Series{' '}
+              <span className="text-[#f6efe9]">Book Excellence Awards 2025 Winner!</span>
             </p>
           </div>
           <div className="flex flex-col gap-3 lg:gap-5">
             <h2 className="font-['Sedan_SC'] text-[16px] leading-[22px] text-black lg:text-[32px] lg:leading-[34px]">
               FEATURED BOOKS
             </h2>
-            <p className="max-w-[354px] font-['Questrial'] text-[12px] leading-[19px] text-[#334155] lg:max-w-none lg:text-lg lg:leading-6">
+            <p className="max-w-[354px] font-['Questrial'] text-[12px] leading-[19px] text-[#334155] lg:max-w-[686px] lg:text-lg lg:leading-6">
               From award-winning author Lin Wilder comes The Reluctant Queen a powerful blend
               of history and storytelling, praised for its fast-paced and compelling narrative.
             </p>
@@ -79,12 +89,13 @@ export default function FeaturedBooks() {
               className="flex min-h-[245px] items-start gap-3 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${mobileTranslateX}px)` }}
             >
-              {featuredBooks.map((book, i) => (
+              {carouselBooks.map((book, i) => (
                 (() => {
                   const isMobileCenterCard = i === startIndex + 1;
+                  const Card = book.path ? Link : 'div';
 
                   return (
-                <Link
+                <Card
                   key={`${book.title}-${i}`}
                   to={book.path}
                   className={`flex shrink-0 flex-col items-start gap-3 transition-transform duration-300 ${
@@ -109,14 +120,16 @@ export default function FeaturedBooks() {
                     <span className="flex-1 font-['Sedan_SC'] text-[11px] leading-[1.2] text-black">
                       {book.displayTitle}
                     </span>
-                    <div className="flex h-[20px] shrink-0 items-center gap-1 rounded-[31px] bg-[#b83431] px-1.5">
-                      <span className="font-['Sedan_SC'] text-[10px] leading-none text-white">
-                        {book.rating}
-                      </span>
-                      <img src={starIcon} alt="star" className="h-[10px] w-[10px]" />
-                    </div>
+                    {book.rating && (
+                      <div className="flex h-[20px] shrink-0 items-center gap-1 rounded-[31px] bg-[#b83431] px-1.5">
+                        <span className="font-['Sedan_SC'] text-[10px] leading-none text-white">
+                          {book.rating}
+                        </span>
+                        <img src={starIcon} alt="star" className="h-[10px] w-[10px]" />
+                      </div>
+                    )}
                   </div>
-                </Link>
+                </Card>
                   );
                 })()
               ))}
@@ -131,8 +144,11 @@ export default function FeaturedBooks() {
               className="flex items-end gap-8 transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${desktopTranslateX}px)` }}
             >
-              {featuredBooks.map((book, i) => (
-                <Link
+              {carouselBooks.map((book, i) => {
+                const Card = book.path ? Link : 'div';
+
+                return (
+                <Card
                   key={`${book.title}-${i}-desktop`}
                   to={book.path}
                   className="flex w-[286px] shrink-0 flex-col gap-6 items-start"
@@ -143,17 +159,20 @@ export default function FeaturedBooks() {
                       alt={book.title}
                       className="h-full w-full object-cover"
                     />
-                    <div className="absolute right-3 top-3">
-                      <RatingBadge rating={book.rating} />
-                    </div>
+                    {book.rating && (
+                      <div className="absolute right-3 top-3">
+                        <RatingBadge rating={book.rating} />
+                      </div>
+                    )}
                   </div>
                   <div className="min-h-[72px] w-full">
                     <span className="block font-['Sedan_SC'] text-xl leading-[34px] text-black">
                       {book.displayTitle}
                     </span>
                   </div>
-                </Link>
-              ))}
+                </Card>
+                );
+              })}
             </div>
           </div>
 
