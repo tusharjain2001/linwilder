@@ -63,13 +63,10 @@ export default function FeaturedBooks() {
     <section className="bg-[#e4e8d7] py-12 lg:py-16">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-4 sm:px-6 lg:gap-16 lg:px-8">
         <div className="mx-auto flex max-w-[686px] flex-col items-center gap-6 text-center lg:max-w-[900px] lg:gap-8">
-          <div className="inline-flex w-fit max-w-[320px] rounded-[3px] bg-[#b83431] px-3 py-2 lg:max-w-none lg:px-4 lg:py-1">
-            <p className="font-['Questrial'] text-[14px] leading-[18px] text-white lg:whitespace-nowrap lg:text-xl lg:leading-[45px]">
-              Dr. Lindsey McCall Medical Mystery Series{' '}
-              <span className="text-[#f6efe9]">Book Excellence Awards 2025 Winner!</span>
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 lg:gap-5">
+          <h2 className="max-w-[340px] font-['Sedan_SC'] text-[18px] leading-[24px] text-black lg:max-w-none lg:text-[32px] lg:leading-[42px]">
+            Dr. Lindsey McCall Medical Mystery Series Book Excellence Awards 2025 Winner!
+          </h2>
+          {/* <div className="flex flex-col gap-3 lg:gap-5">
             <h2 className="font-['Sedan_SC'] text-[16px] leading-[22px] text-black lg:text-[32px] lg:leading-[34px]">
               FEATURED BOOKS
             </h2>
@@ -77,7 +74,7 @@ export default function FeaturedBooks() {
               From award-winning author Lin Wilder comes The Reluctant Queen a powerful blend
               of history and storytelling, praised for its fast-paced and compelling narrative.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col items-center gap-8 lg:gap-10">
