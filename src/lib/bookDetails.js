@@ -36,6 +36,10 @@ const TRAILERS = {
     type: 'file',
     src: 'https://res.cloudinary.com/faa1ovm4/video/upload/v1789199788/violet-releases-fragrance.mp4',
   },
+  'do-you-solemnly-swear': {
+    type: 'file',
+    src: 'https://res.cloudinary.com/dccp724cq/video/upload/v1791374525/BOOK_TRAILER_2_Do_You_Solemnly_Swear_dvwsjw.mp4',
+  },
 };
 
 export function createBookDetailProps(book) {
